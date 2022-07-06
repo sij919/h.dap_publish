@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEIS.DAP</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/popup.css" type="text/css" rel="stylesheet" media="screen" />
+    <style>
+        body{overflow-y: hidden;} /* 추가 */
+        .valid_check{margin-left: 0; margin-bottom: 8px; text-align: left;}
+    </style>
+</head>
+<body>
+<section id="login_wr" style="min-height: 550px;"> <!-- 추가 -->
+    <div>
+        <span class="logo"></span>
+
+        <div class="login_contents">
+            <input type="text" class="login_input" placeholder="아이디">
+            <span class="valid_check">유효성 검사</span>
+        </div>
+        
+        <div class="login_contents">
+            <input type="text" class="login_input" placeholder="비밀번호">
+            <span class="valid_check">유효성 검사</span>
+        </div>
+    
+        <div class="login_check_wr">
+            <input type="checkbox" id="loginCheck" checked>
+            <label for="loginCheck">로그인 정보 저장</label>
+        </div>
+    
+        <button class="btn login">로그인</button>
+
+        <div class="copyright">
+            <span>
+                <a href="#" id="privacyOpen">개인정보취급방침</a>
+                <a href="#" id="serviceOpen">서비스이용약관</a>
+            </span>
+            <hr>
+            ⓒ2021 Hanwha Energy
+        </div>
+    </div>
+</section>
+<script src="js/jquery.min.js"></script>
+</body>
+</html>

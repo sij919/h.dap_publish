@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEIS.DAP</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/content.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+<body>
+<!-- 헤더 시작 -->
+<header>
+    <div class="top_menu_btn">
+        <img src="img/side_menu_btn.svg" alt="메뉴버튼">
+    </div>
+    <div class="top_logo">
+        <img src="img/logo.svg" alt="로고">
+    </div>
+    <div class="top_contents">
+        <select class="language_select" style="width: 60px;">
+            <option>KR</option>
+            <option>EN</option>
+            <option>JP</option>
+        </select>
+        <span>　</span>
+        <a href="#" class="logout_btn">
+            <span>로그아웃</span>
+        </a>
+    </div>
+</header>
+<!-- 헤더 끝 -->
+
+<!-- 메뉴 시작 -->
+<aside>
+    <div class="aside_list_wr">
+        <ul class="aside_list">
+            <li><a href="#"><img src="img/menu/m_user_off.svg" alt="사용자 관리" class="m_menu"><span>사용자 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="userManage.html"><span>사용자 정보 관리</span></a></li>
+                    <li><a href="commentManage.html"><span>평가 코멘트 관리</span></a></li>
+                    <li><a href="customerComment.html"><span>고객의 소리 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_site_off.svg" alt="사이트 관리" class="m_menu"><span>사이트 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="siteManage.html"><span>사이트 정보 관리</span></a></li>
+                    <li><a href="siteManageFacSpecLayer.html"><span>설비 모델 스펙 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_menu_off.svg" alt="데이터룰 관리" class="m_menu"><span>데이터룰 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="tagManage.html"><span>태그 관리</span></a></li>
+                    <li><a href="preProcessRuleManage.html"><span>전처리룰 관리</span></a></li>
+                    <li><a href="thresholdManage.html"><span>이상치 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_search_off.svg" alt="권한 관리" class="m_menu"><span>권한 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="menuAuth.html"><span>메뉴 권한 관리</span></a></li>
+                    <li><a href="checkAuth.html"><span>조회 권한 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_email_off.svg" alt="이력 관리" class="m_menu"><span>이력 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="sendManage.html"><span>메일/SNS 전송 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="commonCode.html"><img src="img/menu/m_contents_off.svg" alt="컨텐츠관리" class="m_menu"><span>공통 코드 관리</span></a></li>
+        </ul>
+    </div>
+</aside>
+<!-- 메뉴 끝 -->
+
+<section id="container">
+    <div class="admin_contents_wr">
+
+        <!-- 컨텐츠 제목 -->
+        <div class="admin_contents_title">전처리룰 관리</div>
+        <!-- 컨텐츠 제목 -->
+
+        <div class="admin_part_wr">
+
+            <!-- 메뉴 목록 시작 (1단) -->
+            <div class="admin_part_list">
+                <span class="admin_contents_sub_title">발전소</span>
+                <div style="clear:both"></div>
+                <ul class="admin_menu_list">
+                    <li class="menu_focus"><a href="#">전체</a></li>
+                    <li><a href="#">발전소 1</a></li>
+                    <li><a href="#">발전소 2</a></li>
+                    <li><a href="#">발전소 3</a></li>
+                    <li><a href="#">발전소 4</a></li>
+                    <li><a href="#">발전소 5</a></li>
+                </ul>
+            </div>
+            <!-- 메뉴 목록 끝 (1단) -->
+
+            <!-- 컨텐츠 시작 (2단) -->
+            <div class="admin_part_contents">
+
+                <!-- 컨텐츠 목록 시작 -->
+                <span class="admin_contents_sub_title">발전소 1</span>
+                <ul class="admin_contents_partlist">
+                    <li class="list_focus"><a href="#">전체</a></li>
+                    <li><a href="#">설비</a></li>
+                    <li><a href="#">VCB01</a></li>
+                    <li><a href="#">TR01</a></li>
+                    <li><a href="#">ACB01</a></li>
+                    <li><a href="#">IN01</a></li>
+                </ul>
+                <ul class="admin_contents_partlist">
+                    <li class="list_focus"><a href="#">전체</a></li>
+                    <li><a href="#">TAE(유효전력량)</a></li>
+                    <li><a href="#">SIRS(일사강도)</a></li>
+                    <li><a href="#">ABC(AC전압)</a></li>
+                </ul>
+                <!-- 컨텐츠 목록 끝 -->
+
+                <!-- 컨텐츠 내역 시작 -->
+                <div class="admin_contents_section" style="width: calc(100% - 400px);"> <!-- 변경 -->
+                    
+                    <div class="form_group">
+                        <label for="parameterName">파라미터명</label>
+                        <input type="text" id="parameterName" value="SIRS(일사강도)">
+                    </div>
+                    <div class="form_group">
+                        <label for="calculate">계산식</label>
+                        <input type="text" id="calculate" value="( TAE + SIRS ) / ABC" style="width: calc(100% - 204px);">
+                        <button class="btn reset" alt="초기화">초기화</button>
+                    </div>
+                    <div class="form_group">
+                        <label for="menu_en" style="height: 50px;">연산기호</label> <!-- 변경 -->
+                            <button class="cal_btn">+</button>
+                            <button class="cal_btn">-</button>
+                            <button class="cal_btn">×</button>
+                            <button class="cal_btn">÷</button>
+                            <button class="cal_btn">(</button>
+                            <button class="cal_btn">)</button>
+                    </div>
+                </div>
+                <!-- 컨텐츠 내역 끝 -->
+
+                <!-- 수정 버튼 시작 -->
+                <div class="btn_section3">
+                    <button class="btn modify" alt="수정">수정</button> <!-- (변경) -->
+                </div>
+                <!-- 수정 버튼 시작 -->
+            </div>
+            <!-- 컨텐츠 끝 (2단) -->
+        </div>
+    </div>
+
+    <!-- 푸터 시작 -->
+    <footer>
+        <img src="img/logo.svg" alt="로고">
+        <span>Copyright ⓒ Hanwha Energy All right reserved.</span>
+    </footer>
+    <!-- 푸터 끝 -->
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // 메뉴 마우스오버 / 마우스아웃 이벤트
+        var menu_src;
+        var change_src;
+
+        $('.aside_list > li > a').on({
+            'mouseover':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_off", "_on");
+                $(this).children('.m_menu').attr('src', change_src);
+            },
+            'mouseout':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_on", "_off");
+                $(this).children('.m_menu').attr('src', change_src);
+            }
+        });
+
+        // 메뉴 on / off시 메뉴 / 컨텐츠 / 푸터 너비 변경 이벤트
+        $('.top_menu_btn').click(function(){
+            if ($('aside').is(':visible')) {
+                $('aside').hide("slide", {direction : "left"}, 500);
+                $('.top_menu_btn > img').attr('src', 'img/side_menu_btn.svg');
+                $('.aside_list span, .sub_menu_btn, .aside_sub_list').css('display', 'none');
+            } else {
+                $('aside').show("slide", {direction : "left"}, 500);
+                $('html').css('background-color', 'rgba(0,0,0,0.5)');
+                $('.top_menu_btn > img').attr('src', 'img/close.svg');
+                $('.aside_list span, .sub_menu_btn').css('display', 'inline-block');
+                $('.aside_sub_list').css('display', 'block');
+            }
+        });
+    });
+</script>
+</body>
+</html>

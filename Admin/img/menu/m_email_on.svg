@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="메일_on" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-1{fill:#f47423}
+        </style>
+    </defs>
+    <g id="그룹_133" transform="translate(.646 10.666)">
+        <g id="그룹_132">
+            <path id="패스_71" d="M28.611 341.5a1 1 0 0 0-1.173 0l-6.766 5.074a1 1 0 0 0 .354.068h14a1 1 0 0 0 .354-.068z" class="cls-1" transform="translate(-20.672 -341.31)"/>
+        </g>
+    </g>
+    <g id="그룹_135" transform="translate(0 4.667)">
+        <g id="그룹_134">
+            <path id="패스_72" d="M.667 151.082v-1.749A.667.667 0 0 0 0 150v9.667a.988.988 0 0 0 .131.485l6.417-4.812z" class="cls-1" transform="translate(0 -149.333)"/>
+        </g>
+    </g>
+    <g id="그룹_137" transform="translate(1.333)">
+        <g id="그룹_136">
+            <path id="패스_73" d="M55.666 0H43a.333.333 0 0 0-.333.333v5.743l5.782 4.185a1.657 1.657 0 0 1 1.769 0L56 6.076V.333A.333.333 0 0 0 55.666 0z" class="cls-1" transform="translate(-42.666)"/>
+        </g>
+    </g>
+    <g id="그룹_139" transform="translate(9.453 4.667)">
+        <g id="그룹_138">
+            <path id="패스_74" d="M308.366 149.333v1.749l-5.881 4.257 6.417 4.812a.988.988 0 0 0 .131-.485V150a.667.667 0 0 0-.667-.667z" class="cls-1" transform="translate(-302.485 -149.333)"/>
+        </g>
+    </g>
+</svg>

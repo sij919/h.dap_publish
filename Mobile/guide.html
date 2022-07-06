@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEIS.DAP</title>
+    <link href="css/mobile.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+<body>
+<div id="m_modal">
+    <img src="img/tutorial.png" alt="튜토리얼">
+    <div class="m_close_wr">
+        <div class="m_todayCheck">
+            <input type="checkbox" id="todayClose" checked>
+            <label for="todayClose">오늘 하루동안 보지 않기</label>
+        </div>
+        <div class="m_close">
+            <img src="img/close.svg" alt="닫기">
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // modal close
+        $(".m_close > img").click(function(){
+            $("#m_modal").hide();
+        });
+    });
+</script>
+</body>
+</html>

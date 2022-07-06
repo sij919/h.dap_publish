@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEIS.DAP</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/content.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+<body>
+<!-- 헤더 시작 -->
+<header>
+    <div class="top_menu_btn">
+        <img src="img/side_menu_btn.svg" alt="메뉴버튼">
+    </div>
+    <div class="top_logo">
+        <img src="img/logo.svg" alt="로고">
+    </div>
+    <div class="top_contents">
+        <select class="language_select" style="width: 60px;">
+            <option>KR</option>
+            <option>EN</option>
+            <option>JP</option>
+        </select>
+        <span>　</span>
+        <a href="#" class="logout_btn">
+            <span>로그아웃</span>
+        </a>
+    </div>
+</header>
+<!-- 헤더 끝 -->
+
+<!-- 메뉴 시작 -->
+<aside>
+    <div class="aside_list_wr">
+        <ul class="aside_list">
+            <li><a href="#"><img src="img/menu/m_user_off.svg" alt="사용자 관리" class="m_menu"><span>사용자 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="userManage.html"><span>사용자 정보 관리</span></a></li>
+                    <li><a href="commentManage.html"><span>평가 코멘트 관리</span></a></li>
+                    <li><a href="customerComment.html"><span>고객의 소리 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_site_off.svg" alt="사이트 관리" class="m_menu"><span>사이트 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="siteManage.html"><span>사이트 정보 관리</span></a></li>
+                    <li><a href="siteManageFacSpecLayer.html"><span>설비 모델 스펙 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_menu_off.svg" alt="데이터룰 관리" class="m_menu"><span>데이터룰 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="tagManage.html"><span>태그 관리</span></a></li>
+                    <li><a href="preProcessRuleManage.html"><span>전처리룰 관리</span></a></li>
+                    <li><a href="thresholdManage.html"><span>이상치 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_search_off.svg" alt="권한 관리" class="m_menu"><span>권한 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="menuAuth.html"><span>메뉴 권한 관리</span></a></li>
+                    <li><a href="checkAuth.html"><span>조회 권한 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_email_off.svg" alt="이력 관리" class="m_menu"><span>이력 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="sendManage.html"><span>메일/SNS 전송 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="commonCode.html"><img src="img/menu/m_contents_off.svg" alt="컨텐츠관리" class="m_menu"><span>공통 코드 관리</span></a></li>
+        </ul>
+    </div>
+</aside>
+<!-- 메뉴 끝 -->
+
+<section id="container">
+    <!-- 전체 컨텐츠 시작 -->
+    <div class="admin_contents_wr">
+
+        <!-- 컨텐츠 제목 -->
+        <div class="admin_contents_title">조회 권한 관리</div>
+        <!-- 컨텐츠 제목 -->
+
+        <div class="admin_part_wr">
+
+            <!-- 메뉴 목록 시작 (1단) -->
+            <div class="admin_part_list">
+                <span class="admin_contents_sub_title">조회권한목록</span>
+                <ul class="admin_menu_list">
+                    <li class="menu_focus"><a href="#">Admin</a></li>
+                    <li><a href="#">Operator</a></li>
+                    <li><a href="#">Installer</a></li>
+                    <li><a href="#">Q&M</a></li>
+                    <li><a href="#">Invoice</a></li>
+                    <li><a href="#">Customer</a></li>
+                </ul>
+                <div class="menu_btn_wr">
+                    <button class="btn add" alt="추가" style="width: 100%;">추가</a>
+                </div>
+            </div>
+            <!-- 메뉴 목록 끝 (1단) -->
+
+            <!-- 컨텐츠 시작 (2단) -->
+            <div class="admin_part_contents">
+
+                <!-- 컨텐츠 제목 시작 -->
+                <span class="admin_contents_sub_title">Admin</span>
+                <!-- 컨텐츠 제목 끝 -->
+
+                <!-- 컨텐츠 내역 시작 -->
+                <div class="admin_site_section_01">
+                    <span>선택되지 않은 사이트</span>
+                    <ul class="admin_site_list">
+                        <li>
+                            <!-- 사이트 검색 시작 -->
+                            <div class="admin_site_search">
+                                <div class="admin_site_check">
+                                    <input type="checkbox" id="siteCount" checked>
+                                    <label for="siteCount">3개</label>
+                                </div>
+                                
+                                <div class="search_group">
+                                    <input type="text" id="searchSite" style="width: 100%;">
+                                    <button type="button" class="search"></button>
+                                </div>
+
+                                <button class="btn move" alt="오른쪽 이동">To Right</button>
+                            </div>
+                            <!-- 사이트 검색 끝 -->
+
+                            <!-- 사이트 리스트 시작 -->
+                            <ul class="admin_site_sub_list">
+                                <li>
+                                    <input type="checkbox" id="site1-1" checked>
+                                    <label for="site1-1">AUAU0010120200800001</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="site1-2" checked>
+                                    <label for="site1-2">AUAU0010120200800002</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="site1-2" checked>
+                                    <label for="site1-2">AUAU0010120200800002</label>
+                                </li>
+                            </ul>
+                            <!-- 사이트 리스트 끝 -->
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="admin_site_section_02">
+                    <span>선택된 사이트</span>
+                    <ul class="admin_site_list" style="clear: left;">
+                        <li>
+                            <!-- 사이트 검색 시작 -->
+                            <div class="admin_site_search">
+                                <div class="admin_site_check">
+                                    <input type="checkbox" id="siteCount">
+                                    <label for="siteCount">0개</label>
+                                </div>
+                                
+                                <div class="search_group">
+                                    <input type="text" id="searchSite" style="width: 100%;">
+                                    <button type="button" class="search"></button>
+                                </div>
+
+                                <button class="btn move" alt="왼쪽 이동">To Left</button>
+                            </div>
+                            <!-- 사이트 검색 끝 -->
+
+                            <!-- 사이트 리스트 시작 -->
+                            <ul class="admin_site_sub_list">
+                                <li>
+                                    <input type="checkbox" id="site2-1" disabled>
+                                    <label for="site2-1">AUAU0010120200800001</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="site2-2" disabled>
+                                    <label for="site2-2">AUAU0010120200800002</label>
+                                </li>
+                            </ul>
+                            <!-- 사이트 리스트 끝 -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- 컨텐츠 내역 끝 -->
+            
+                <!-- 저장 버튼 시작 -->
+                <div class="btn_section3">
+                    <button class="btn add" alt="저장">저장</button>
+                </div>
+                <!-- 저장 버튼 시작 -->
+            </div>
+            <!-- 컨텐츠 끝 (2단) -->
+
+        </div>
+    </div>
+    <!-- 전체 컨텐츠 끝 -->
+
+    <!-- 푸터 시작 -->
+    <footer>
+        <img src="img/logo.svg" alt="로고">
+        <span>Copyright ⓒ Hanwha Energy All right reserved.</span>
+    </footer>
+    <!-- 푸터 끝 -->
+</section>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+    $(document).ready(function() {
+
+        // 메뉴 마우스오버 / 마우스아웃 이벤트
+        var menu_src;
+        var change_src;
+
+        $('.aside_list > li > a').on({
+            'mouseover':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_off", "_on");
+                $(this).children('.m_menu').attr('src', change_src);
+            },
+            'mouseout':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_on", "_off");
+                $(this).children('.m_menu').attr('src', change_src);
+            }
+        });
+
+        // 메뉴 열기
+        $('.top_menu_btn').click(function(){
+            if ($('aside').is(':visible')) {
+                $('aside').hide("slide", {direction : "left"}, 500);
+                $('.top_menu_btn > img').attr('src', 'img/side_menu_btn.svg');
+                $('.aside_list span, .sub_menu_btn, .aside_sub_list').css('display', 'none');
+                $("#modal3").hide();
+            } else {
+                $('aside').show("slide", {direction : "left"}, 500);
+                $('html').css('background-color', 'rgba(0,0,0,0.5)');
+                $('.top_menu_btn > img').attr('src', 'img/close.svg');
+                $('.aside_list span, .sub_menu_btn').css('display', 'inline-block');
+                $('.aside_sub_list').css('display', 'block');
+                $("#modal3").show();
+            }
+        });
+    });
+</script>
+</body>
+</html>

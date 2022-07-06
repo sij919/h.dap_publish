@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEIS.DAP</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/content.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/calendar.css" type="text/css" rel="stylesheet" media="screen" />
+    <style>
+        .form_group > ul{display: flex; align-items: center; height: 34px;}
+        .form_group > ul > li{display: inline-block; position: relative; top: 0; width: 80px;}
+    </style>
+</head>
+<body>
+<!-- 헤더 시작 -->
+<header>
+    <div class="top_menu_btn">
+        <img src="img/side_menu_btn.svg" alt="메뉴버튼">
+    </div>
+    <div class="top_logo">
+        <img src="img/logo.svg" alt="로고">
+    </div>
+    <div class="top_contents">
+        <select class="language_select" style="width: 60px;">
+            <option>KR</option>
+            <option>EN</option>
+            <option>JP</option>
+        </select>
+        <span>　</span>
+        <a href="#" class="logout_btn">
+            <span>로그아웃</span>
+        </a>
+    </div>
+</header>
+<!-- 헤더 끝 -->
+
+<!-- 메뉴 시작 -->
+<aside>
+    <div class="aside_list_wr">
+        <ul class="aside_list">
+            <li><a href="#"><img src="img/menu/m_user_off.svg" alt="사용자 관리" class="m_menu"><span>사용자 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="userManage.html"><span>사용자 정보 관리</span></a></li>
+                    <li><a href="commentManage.html"><span>평가 코멘트 관리</span></a></li>
+                    <li><a href="customerComment.html"><span>고객의 소리 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_site_off.svg" alt="사이트 관리" class="m_menu"><span>사이트 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="siteManage.html"><span>사이트 정보 관리</span></a></li>
+                    <li><a href="siteManageFacSpecLayer.html"><span>설비 모델 스펙 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_menu_off.svg" alt="데이터룰 관리" class="m_menu"><span>데이터룰 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="tagManage.html"><span>태그 관리</span></a></li>
+                    <li><a href="preProcessRuleManage.html"><span>전처리룰 관리</span></a></li>
+                    <li><a href="thresholdManage.html"><span>이상치 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_search_off.svg" alt="권한 관리" class="m_menu"><span>권한 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="menuAuth.html"><span>메뉴 권한 관리</span></a></li>
+                    <li><a href="checkAuth.html"><span>조회 권한 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_email_off.svg" alt="이력 관리" class="m_menu"><span>이력 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="sendManage.html"><span>메일/SNS 전송 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="commonCode.html"><img src="img/menu/m_contents_off.svg" alt="컨텐츠관리" class="m_menu"><span>공통 코드 관리</span></a></li>
+        </ul>
+    </div>
+</aside>
+<!-- 메뉴 끝 -->
+
+<section id="container">
+    <div class="admin_contents_wr">
+
+        <!-- 컨텐츠 제목 -->
+        <div class="admin_contents_title">메일 / SNS 전송 관리</div>
+        <!-- 컨텐츠 제목 -->
+
+        <div class="admin_contents">
+            <div class="view_count">조회건수 <span>9</span></div>
+
+            <!-- 검색 시작 -->
+            <div class="search_wr">
+                <div class="search_group">
+                    <div class="form_group">
+                        <ul>
+                            <li><input type="checkbox" id="sendMonth" name="sendDate" checked>
+                                <label for="sendMonth">월간</label>
+                            </li>
+                            <li><input type="checkbox" id="sendYear" name="sendDate">
+                                <label for="sendYear">연간</label>
+                            </li>  
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="search_group">
+                    <!-- 월간 달력 -->
+                    <div class="calendar_box" style="width: 100%;">
+                        <input type="text" id="calMonth">
+                        <label for="calMonth"><img src="img/calendar.svg" alt="달력"></label>
+                    </div>
+                    <!-- 월간 달력 -->
+
+                    <!-- 연간 달력 -->
+                    <!-- <div class="calendar_box">
+                        <input type="text" id="calYear">
+                        <label for="calYear"><img src="img/calendar.svg" alt="달력"></label>
+                    </div> -->
+                    <!-- 연간 달력 -->
+                </div>
+            </div>
+            <!-- 검색 끝 -->
+
+            <div class="admin_contents_table_wr">
+
+                <!-- 컨텐츠 (테이블) 시작-->
+                <table class="table">
+                    <colgroup>
+                        <col style="width: 10%;">
+                        <col style="width: 25%;">
+                        <col style="width: 25%;">
+                        <col style="width: 15%;">
+                        <col style="width: 15%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>수신자</th>
+                            <th>SNS</th>
+                            <th>Email</th>
+                            <th>WEB<br />발행현황</th>
+                            <th>Mobile<br />발행현황</th>
+                            <th><div style="margin-bottom: 10px;">일괄전송</div>
+                                <div class="check">
+                                    <input type="checkbox" id="sendCheckAll">
+                                    <label for="sendCheckAll"></label>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="txt_c">user01</td>
+                            <td class="txt_c">SNS</td>
+                            <td class="txt_c">aaa@hanwha.com</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">
+                                <div class="check">
+                                    <input type="checkbox" id="sendCheck01">
+                                    <label for="sendCheck01"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">user01</td>
+                            <td class="txt_c">SNS</td>
+                            <td class="txt_c">aaa@hanwha.com</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">
+                                <div class="check">
+                                    <input type="checkbox" id="sendCheck02">
+                                    <label for="sendCheck02"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">user01</td>
+                            <td class="txt_c">SNS</td>
+                            <td class="txt_c">aaa@hanwha.com</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">
+                                <div class="check">
+                                    <input type="checkbox" id="sendCheck03">
+                                    <label for="sendCheck03"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">user01</td>
+                            <td class="txt_c">SNS</td>
+                            <td class="txt_c">aaa@hanwha.com</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">
+                                <div class="check">
+                                    <input type="checkbox" id="sendCheck04">
+                                    <label for="sendCheck04"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">user01</td>
+                            <td class="txt_c">SNS</td>
+                            <td class="txt_c">aaa@hanwha.com</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">
+                                <div class="check">
+                                    <input type="checkbox" id="sendCheck05">
+                                    <label for="sendCheck05"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">user01</td>
+                            <td class="txt_c">SNS</td>
+                            <td class="txt_c">aaa@hanwha.com</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">
+                                <div class="check">
+                                    <input type="checkbox" id="sendCheck06">
+                                    <label for="sendCheck06"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">user01</td>
+                            <td class="txt_c">SNS</td>
+                            <td class="txt_c">aaa@hanwha.com</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">
+                                <div class="check">
+                                    <input type="checkbox" id="sendCheck07">
+                                    <label for="sendCheck07"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">user01</td>
+                            <td class="txt_c">SNS</td>
+                            <td class="txt_c">aaa@hanwha.com</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">
+                                <div class="check">
+                                    <input type="checkbox" id="sendCheck08">
+                                    <label for="sendCheck08"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">user01</td>
+                            <td class="txt_c">SNS</td>
+                            <td class="txt_c">aaa@hanwha.com</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">
+                                <div class="check">
+                                    <input type="checkbox" id="sendCheck09">
+                                    <label for="sendCheck09"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">user01</td>
+                            <td class="txt_c">SNS</td>
+                            <td class="txt_c">aaa@hanwha.com</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">10/10</td>
+                            <td class="txt_c">
+                                <div class="check">
+                                    <input type="checkbox" id="sendCheck10">
+                                    <label for="sendCheck10"></label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 컨텐츠 (테이블) 끝 -->
+            </div>
+
+            <!-- 페이징 시작 -->
+            <div class="admin_pagination_wr">
+                <ul class="admin_pagination">
+                    <li>
+                        <a href="#" class="page_link">
+                            <img src="img/backward.svg" alt="첫페이지로 이동">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="page_link">
+                            <img src="img/prev.svg" alt="이전페이지로 이동">
+                        </a>
+                    </li>
+                    <li><a href="#" class="page_focus">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" class="page_link">
+                            <img src="img/next.svg" alt="다음페이지로 이동">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="page_link">
+                            <img src="img/forward.svg" alt="마지막페이지로 이동">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 페이징 끝 -->
+
+            <!-- 등록버튼 시작 -->
+            <div class="btn_section" style="text-align: right;">
+                <button class="btn manage" alt="전송설정">전송설정</button>
+                <button class="btn send" alt="일괄전송">일괄전송</button>
+            </div>
+            <!-- 등록버튼 끝 -->
+        </div>
+    </div>
+
+    <!-- 푸터 시작 -->
+    <footer>
+        <img src="img/logo.svg" alt="로고">
+        <span>Copyright ⓒ Hanwha Energy All right reserved.</span>
+    </footer>
+    <!-- 푸터 끝 -->
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/bootstrap-datetimepicker.js"></script>
+<script src="js/bootstrap-datetimepicker.ko.js"></script>
+
+<script>
+    $(document).ready(function() {
+        
+        var menu_src;
+        var change_src;
+
+        // 메뉴 마우스오버 / 마우스아웃
+        $('.aside_list > li > a').on({
+            'mouseover':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_off", "_on");
+                $(this).children('.m_menu').attr('src', change_src);
+            },
+            'mouseout':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_on", "_off");
+                $(this).children('.m_menu').attr('src', change_src);
+            }
+        });
+
+        // 사이드 메뉴 슬라이드
+        $('.top_menu_btn').click(function(){
+            if ($('aside').is(':visible')) {
+                $('aside').hide("slide", {direction : "left"}, 500);
+                $('.top_menu_btn > img').attr('src', 'img/side_menu_btn.svg');
+                $('.aside_list span, .sub_menu_btn, .aside_sub_list').css('display', 'none');
+            } else {
+                $('aside').show("slide", {direction : "left"}, 500);
+                $('html').css('background-color', 'rgba(0,0,0,0.5)');
+                $('.top_menu_btn > img').attr('src', 'img/close.svg');
+                $('.aside_list span, .sub_menu_btn').css('display', 'inline-block');
+                $('.aside_sub_list').css('display', 'block');
+            }
+        });
+
+
+        // 달력(Month)
+        $('#calMonth').datetimepicker({
+            language: 'ko',
+            format: 'yyyy년 mm월',
+            minView: 'year', // 최소 depth(day / month / year / decade)
+            maxView: 'year', // 최대 depth(day / month / year / decade)
+            weekStart: 0, // sun(0) - sat(6)
+            todayBtn:  1,
+            autoclose: 1,
+            startView: 3, // 2 : day / 3 : month / 4 : year
+        });
+
+        // 달력(Year)
+        $('#calYear').datetimepicker({
+            language: 'ko',
+            format: 'yyyy년',
+            minView: 'decade', // 최소 depth(day / month / year / decade)
+            maxView: 'decade', // 최대 depth(day / month / year / decade)
+            weekStart: 0, // sun(0) - sat(6)
+            todayBtn:  1,
+            autoclose: 1,
+            startView: 4, // 2 : day / 3 : month / 4 : year
+        });
+    });
+</script>
+</body>
+</html>

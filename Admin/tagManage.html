@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEIS.DAP</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/content.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+<body>
+<!-- 헤더 시작 -->
+<header>
+    <div class="top_menu_btn">
+        <img src="img/side_menu_btn.svg" alt="메뉴버튼">
+    </div>
+    <div class="top_logo">
+        <span class="logo"></span>
+    </div>
+    <div class="top_contents">
+        <select class="language_select" style="width: 60px;">
+            <option>KR</option>
+            <option>EN</option>
+            <option>JP</option>
+        </select>
+        <span>　</span>
+        <a href="#" class="logout_btn">
+            <span>로그아웃</span>
+        </a>
+    </div>
+</header>
+<!-- 헤더 끝 -->
+
+<!-- 메뉴 시작 -->
+<aside>
+    <div class="aside_list_wr">
+        <ul class="aside_list">
+            <li><a href="#"><img src="img/menu/m_user_off.svg" alt="사용자 관리" class="m_menu"><span>사용자 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="userManage.html"><span>사용자 정보 관리</span></a></li>
+                    <li><a href="commentManage.html"><span>평가 코멘트 관리</span></a></li>
+                    <li><a href="customerComment.html"><span>고객의 소리 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_site_off.svg" alt="사이트 관리" class="m_menu"><span>사이트 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="siteManage.html"><span>사이트 정보 관리</span></a></li>
+                    <li><a href="siteManageFacSpecLayer.html"><span>설비 모델 스펙 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_menu_off.svg" alt="데이터룰 관리" class="m_menu"><span>데이터룰 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="tagManage.html"><span>태그 관리</span></a></li>
+                    <li><a href="preProcessRuleManage.html"><span>전처리룰 관리</span></a></li>
+                    <li><a href="thresholdManage.html"><span>이상치 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_search_off.svg" alt="권한 관리" class="m_menu"><span>권한 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="menuAuth.html"><span>메뉴 권한 관리</span></a></li>
+                    <li><a href="checkAuth.html"><span>조회 권한 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_email_off.svg" alt="이력 관리" class="m_menu"><span>이력 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="sendManage.html"><span>메일/SNS 전송 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="commonCode.html"><img src="img/menu/m_contents_off.svg" alt="컨텐츠관리" class="m_menu"><span>공통 코드 관리</span></a></li>
+        </ul>
+    </div>
+</aside>
+<!-- 메뉴 끝 -->
+
+<section id="container">
+    <div class="admin_contents_wr">
+
+        <!-- 컨텐츠 제목 -->
+        <div class="admin_contents_title">태그관리</div>
+        <!-- 컨텐츠 제목 -->
+
+        <div class="admin_contents">
+            <!-- 엑셀 다운로드 / 검색 시작 -->
+            <div class="view_count">조회건수 <span>109,977</span></div>
+            <div class="search_wr">
+                <div style="float: left; margin-right: 10px;">
+                    <div class="download_btn">
+                        <img src="img/excel.svg" alt="엑셀 다운로드">
+                    </div>
+    
+                    <div class="search_group">
+                        <label for="site">사이트</label>
+                        <input type="text" id="site" style="width: 90px;">
+                    </div>
+                    
+                    <div class="search_group">
+                        <label for="facType">설비유형</label>
+                        <select name="facType" id="facType" style="width: 110px;">
+                            <option value=" ">선택</option>
+                            <option value="plant">발전소</option>
+                            <option value="plant">송전변압기</option>
+                        </select>
+                    </div>
+                    
+                    <div class="search_group">
+                        <label for="tag">태그</label>
+                        <input type="text" id="tag" style="width: 150px;">
+                    </div>
+    
+                    <div class="search_group">
+                        <label for="tagType">태그타입</label>
+                        <select name="tagType" id="tagType" style="width: 60px;">
+                            <option value=" ">선택</option>
+                            <option value="E">E</option>
+                            <option value="D">D</option>
+                        </select>
+                    </div>
+
+                    <div class="search_group">
+                        <label for="alarmYn">알람여부</label>
+                        <select name="alarmYn" id="alarmYn" style="width: 60px;">
+                            <option value=" ">선택</option>
+                            <option value="Y">Y</option>
+                            <option value="N">N</option>
+                        </select>
+                    </div>
+
+                    <div class="search_group">
+                        <label for="useYn">사용여부</label>
+                        <select name="useYn" id="useYn" style="width: 60px;">
+                            <option value=" ">선택</option>
+                            <option value="Y">Y</option>
+                            <option value="N">N</option>
+                        </select>
+                    </div>
+
+                    <button class="btn ok" alt="검색" style="float: left; height: 34px;">검색</button>
+                    <button class="btn refresh" id="btnCancel" alt="새로고침"></button>
+                </div>
+            </div>
+            <!-- 엑셀 다운로드 / 검색 끝 -->
+
+            <div class="admin_contents_table_wr">
+                <!-- 컨텐츠 (테이블) 시작-->
+                <table class="table">
+                    <colgroup>
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 20%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 14%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>발전소</th>
+                            <th>설비명</th>                 
+                            <th>태그ID</th>
+                            <th>태그명</th>
+                            <th>파라미터명</th>
+                            <th>사용여부</th>
+                            <th>수정</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="txt_c">Akiba</td>
+                            <td class="txt_c">PCS</td>
+                            <td class="txt_c">A1016#WHM</td>
+                            <td class="txt_c">유효전력</td>
+                            <td class="txt_c">유효전력량</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">
+                                <button class="btn modify" alt="수정">수정</button>
+                                <button class="btn delete" alt="삭제">삭제</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">Akiba</td>
+                            <td class="txt_c">PCS</td>
+                            <td class="txt_c">A1016#WHM</td>
+                            <td class="txt_c">유효전력</td>
+                            <td class="txt_c">유효전력량</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">
+                                <button class="btn modify" alt="수정">수정</button>
+                                <button class="btn delete" alt="삭제">삭제</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">Akiba</td>
+                            <td class="txt_c">PCS</td>
+                            <td class="txt_c">A1016#WHM</td>
+                            <td class="txt_c">유효전력</td>
+                            <td class="txt_c">유효전력량</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">
+                                <button class="btn modify" alt="수정">수정</button>
+                                <button class="btn delete" alt="삭제">삭제</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">Akiba</td>
+                            <td class="txt_c">PCS</td>
+                            <td class="txt_c">A1016#WHM</td>
+                            <td class="txt_c">유효전력</td>
+                            <td class="txt_c">유효전력량</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">
+                                <button class="btn modify" alt="수정">수정</button>
+                                <button class="btn delete" alt="삭제">삭제</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">Akiba</td>
+                            <td class="txt_c">PCS</td>
+                            <td class="txt_c">A1016#WHM</td>
+                            <td class="txt_c">유효전력</td>
+                            <td class="txt_c">유효전력량</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">
+                                <button class="btn modify" alt="수정">수정</button>
+                                <button class="btn delete" alt="삭제">삭제</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">Akiba</td>
+                            <td class="txt_c">PCS</td>
+                            <td class="txt_c">A1016#WHM</td>
+                            <td class="txt_c">유효전력</td>
+                            <td class="txt_c">유효전력량</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">
+                                <button class="btn modify" alt="수정">수정</button>
+                                <button class="btn delete" alt="삭제">삭제</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">Akiba</td>
+                            <td class="txt_c">PCS</td>
+                            <td class="txt_c">A1016#WHM</td>
+                            <td class="txt_c">유효전력</td>
+                            <td class="txt_c">유효전력량</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">
+                                <button class="btn modify" alt="수정">수정</button>
+                                <button class="btn delete" alt="삭제">삭제</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">Akiba</td>
+                            <td class="txt_c">PCS</td>
+                            <td class="txt_c">A1016#WHM</td>
+                            <td class="txt_c">유효전력</td>
+                            <td class="txt_c">유효전력량</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">
+                                <button class="btn modify" alt="수정">수정</button>
+                                <button class="btn delete" alt="삭제">삭제</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">Akiba</td>
+                            <td class="txt_c">PCS</td>
+                            <td class="txt_c">A1016#WHM</td>
+                            <td class="txt_c">유효전력</td>
+                            <td class="txt_c">유효전력량</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">
+                                <button class="btn modify" alt="수정">수정</button>
+                                <button class="btn delete" alt="삭제">삭제</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txt_c">Akiba</td>
+                            <td class="txt_c">PCS</td>
+                            <td class="txt_c">A1016#WHM</td>
+                            <td class="txt_c">유효전력</td>
+                            <td class="txt_c">유효전력량</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">
+                                <button class="btn modify" alt="수정">수정</button>
+                                <button class="btn delete" alt="삭제">삭제</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 컨텐츠 (테이블) 끝 -->
+            </div>
+
+            <!-- 페이징 시작 -->
+            <div class="admin_pagination_wr">
+                <ul class="admin_pagination">
+                    <li>
+                        <a href="#" class="page_link">
+                            <img src="img/backward.svg" alt="첫페이지로 이동">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="page_link">
+                            <img src="img/prev.svg" alt="이전페이지로 이동">
+                        </a>
+                    </li>
+                    <li><a href="#" class="page_focus">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" class="page_link">
+                            <img src="img/next.svg" alt="다음페이지로 이동">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="page_link">
+                            <img src="img/forward.svg" alt="마지막페이지로 이동">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 페이징 끝 -->
+
+            <!-- 등록버튼 시작 --> <!-- (변경) -->
+            <div class="btn_section" style="text-align: right;">
+                <button class="btn add" alt="신규등록">신규등록</button>
+                <button class="btn group_add_1" alt="일괄등록">일괄등록</button>
+            </div>
+            <!-- 등록버튼 끝 -->
+        </div>
+    </div>
+
+    <!-- 푸터 시작 -->
+    <footer>
+        <span class="b_logo"></span>
+        <span>Copyright ⓒ Hanwha Energy All right reserved.</span>
+    </footer>
+    <!-- 푸터 끝 -->
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // 메뉴 마우스오버 / 마우스아웃 이벤트
+        var menu_src;
+        var change_src;
+
+        $('.aside_list > li > a').on({
+            'mouseover':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_off", "_on");
+                $(this).children('.m_menu').attr('src', change_src);
+            },
+            'mouseout':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_on", "_off");
+                $(this).children('.m_menu').attr('src', change_src);
+            }
+        });
+
+        // 메뉴 on / off시 메뉴 / 컨텐츠 / 푸터 너비 변경 이벤트
+        $('.top_menu_btn').click(function(){
+            if ($('aside').is(':visible')) {
+                $('aside').hide("slide", {direction : "left"}, 500);
+                $('.top_menu_btn > img').attr('src', 'img/side_menu_btn.svg');
+                $('.aside_list span, .sub_menu_btn, .aside_sub_list').css('display', 'none');
+            } else {
+                $('aside').show("slide", {direction : "left"}, 500);
+                $('html').css('background-color', 'rgba(0,0,0,0.5)');
+                $('.top_menu_btn > img').attr('src', 'img/close.svg');
+                $('.aside_list span, .sub_menu_btn').css('display', 'inline-block');
+                $('.aside_sub_list').css('display', 'block');
+            }
+        });
+    });
+</script>
+</body>
+</html>

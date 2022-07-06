@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/* Noto Sans KR Light*/
+@font-face{font-family: 'Noto Sans KR'; font-style: normal; font-weight: 300; src: url(../font/NotoSansKR-Light.otf) format('otf');}
+/* Noto Sans KR */
+@font-face{font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; src: url(../font/NotoSansKR-Regular.otf) format('otf');}
+/* Noto Sans KR Bold */
+@font-face{font-family: 'Noto Sans KR'; font-style: normal; font-weight: 700; src: url(../font/NotoSansKR-Bold.otf) format('otf');}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', 'Nanum Gothic', '나눔고딕', Malgun Gothic, '맑은 고딕', sans-serif, Dotum, '돋움', Gulim, '굴림';
+}
+body{color: #1d1d1d; overflow-y: auto;}
+html, body{width: 100%; height: 100%; font-size: 14px;}
+ul{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none; cursor: pointer; color: inherit;}
+button{cursor: pointer; box-sizing: border-box; border: 0; background: transparent;}
+table{border-collapse: collapse;}
+input, textarea, select{transition: border-color 0.15s ease-in-out;}
+input:focus, textarea:focus, select:focus{outline: 0; border-color: #152b41;}
+select{
+    display: inline-block;
+    height: 34px;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    background: url('../img/down_arrow.svg') no-repeat 100% 50%;
+    background-size: 20px 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+select::-ms-expand{display: none;}
+textarea{width: 100%; border: 1px solid #dcdcdc; overflow-y: auto; padding: 5px 10px;}
+label{display: inline-block; box-sizing: border-box;}
+img{cursor: pointer;}
+input{
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    padding: 0 10px;
+}
+input[type=text]::-ms-clear{display: none;}
+input:disabled, textarea:disabled, select:disabled{background-color: #eeeeee; color: #a2a2a2;}
+input:disabled + label, textarea:disabled + label{color: #a8a8a8;}
+input[type="checkbox"], input[type="radio"]{
+    width: 0px;
+    height: 0px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+input[type="checkbox"] + label, input[type="radio"] + label{
+    display: inline-block;
+    position: relative;
+    padding-left: 26px;
+    cursor: pointer;
+}
+input[type="checkbox"] + label:before, input[type="radio"] + label:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: #ebebeb;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="radio"] + label:before, input[type="radio"] + label:after{
+    border-radius: 100%;
+}
+input[type="checkbox"]:checked + label:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url('../img/f_check.svg') no-repeat;
+}
+input[type="radio"]:checked + label:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: url('../img/f_radio.svg') no-repeat;
+}
+input[type="checkbox"]:disabled + label:after{
+    border-radius: 4px;
+}
+input[type="checkbox"]:disabled + label:after, input[type="radio"]:disabled + label:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #e2e2e2;
+}

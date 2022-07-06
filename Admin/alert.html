@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>경고창</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/popup.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+<body>
+<!-- 레이어 팝업 -->
+<div id="modal2">
+    <div>
+        <div class="alert_wr">
+            <div>
+                <img src="img/alert.svg">
+                <span>
+                    정보보호를 위하여 연결이 종료되었습니다.<br />
+                    재로그인 후 사용하여 주십시오.
+                </span>
+            </div>
+
+            <button class="btn ok modalClose" alt="확인">확인</button>
+        </div>
+    </div>
+</div>
+<!-- 레이어 팝업 -->
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // modal open
+        // $(".modalOpen").click(function(){
+            $("#modal2").show();
+            $("#modal2 > div").css('margin-top', -($("#modal2 > div").height() / 2));
+            $("#modal2 > div").css('margin-left', -($("#modal2 > div").width() / 2));
+        // });
+
+        // modal close
+        $(".modalClose").click(function(){
+            $("#modal2").hide();
+        });
+    });
+</script>
+</body>
+</html>

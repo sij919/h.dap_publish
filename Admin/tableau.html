@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEIS.DAP</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/content.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/popup.css" type="text/css" rel="stylesheet" media="screen" />
+    <script type="text/javascript"
+	    src="https://tdap.hanwha.com/javascripts/api/tableau-2.min.js"></script>
+	<style>
+        #tableauArea{
+            text-align: center;
+            margin: 0 auto; /* Tableau 영역 콘텐츠 가운데 정렬 */
+        }
+		.tab-zone-margin{
+            display: inline-block;
+            width: 95%; /* 상단 메뉴 너비 수정 (와이드 스크린) */
+            height: 71px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            margin: 0 15px;
+            scroll-behavior: smooth;
+		}
+		.inline {
+            font-family: "Tableau Book", Arial, sans-serif;
+			display: inline-block;
+			background-color : rgb(237, 237, 237);
+            border: 1px solid rgb(237, 237, 237);
+			width: 140px;
+			height: 51px;
+			font-size: 9pt;
+			color: #767676;
+            vertical-align: middle;
+            white-space: normal;
+            text-align: left;
+            cursor: pointer;
+            padding-left: 25px;
+            padding-top: 11px;
+            padding-right: 12px;
+            text-indent: -14px;
+		}
+		.inline:hover {
+			border-color: rgb(0, 0, 0);
+		}
+		.selected {
+			background-color : rgb(219, 219, 219);
+			color: rgb(0, 0, 0);
+			border: 1px solid rgb(219, 219, 219);
+            font-weight: bold;
+		}
+        .tab-arrow {
+            display: inline-block;
+            width: 16px;
+            height: 51px;
+            cursor: pointer;
+            vertical-align: top;
+            padding-top: 10px;
+        }
+        .tab-left {
+            background: url(img/vqlweb.svg) -40px -150px no-repeat; /* url 경로변경(서버) */
+            opacity: .3;
+            width: 16px;
+            height: 32px;
+        }
+        .tab-right {
+            background: url(img/vqlweb.svg) -20px -150px no-repeat; /* url 경로변경(서버) */
+            opacity: .3;
+            width: 16px;
+            height: 32px;
+        }
+        .tab-left:hover, .tab-right:hover {
+            opacity: 1;
+        }
+	</style>
+    <script type="text/javascript">
+		var viz = null;
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "https://tdap.hanwha.com/#/views/PV_WEB/1_PVSummary",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            viz = new tableau.Viz(containerDiv, url, options);
+            // Create a viz object and embed it in the container div.
+        }
+		function moveDashboard(target){
+			var sheetName = target.textContent;
+			workbook = viz.getWorkbook();
+
+			workbook.activateSheetAsync(sheetName);
+			
+			var elements = document.getElementsByClassName('inline');
+			for (var i = 0; i < elements.length; i++) {
+				elements[i].classList.remove('selected');
+			}
+			target.classList.add('selected');
+		}
+		document.addEventListener("DOMContentLoaded", function(){
+		  initViz();
+		});
+		
+    </script>
+</head>
+<body>
+<!-- 헤더 시작 -->
+<header>
+    <div class="top_menu_btn">
+        <img src="img/side_menu_btn.svg" alt="메뉴버튼">
+    </div>
+    <div class="top_logo">
+        <img src="img/logo.svg" alt="로고">
+    </div>
+    <div class="top_contents">
+        <select class="language_select" style="width: 60px;">
+            <option>KR</option>
+            <option>EN</option>
+            <option>JP</option>
+        </select>
+        <span>　</span>
+        <a href="#" class="logout_btn">
+            <span>로그아웃</span>
+        </a>
+    </div>
+</header>
+<!-- 헤더 끝 -->
+
+<!-- 메뉴 시작 -->
+<aside>
+    <div class="aside_list_wr">
+        <ul class="aside_list">
+            <li><a href="#"><img src="img/menu/m_user_off.svg" alt="사용자 관리" class="m_menu"><span>사용자 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="userManage.html"><span>사용자 정보 관리</span></a></li>
+                    <li><a href="commentManage.html"><span>평가 코멘트 관리</span></a></li>
+                    <li><a href="customerComment.html"><span>고객의 소리 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_site_off.svg" alt="사이트 관리" class="m_menu"><span>사이트 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="siteManage.html"><span>사이트 정보 관리</span></a></li>
+                    <li><a href="siteManageFacSpecLayer.html"><span>설비 모델 스펙 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_menu_off.svg" alt="데이터룰 관리" class="m_menu"><span>데이터룰 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="tagManage.html"><span>태그 관리</span></a></li>
+                    <li><a href="preProcessRuleManage.html"><span>전처리룰 관리</span></a></li>
+                    <li><a href="thresholdManage.html"><span>이상치 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_search_off.svg" alt="권한 관리" class="m_menu"><span>권한 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="menuAuth.html"><span>메뉴 권한 관리</span></a></li>
+                    <li><a href="checkAuth.html"><span>조회 권한 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_email_off.svg" alt="이력 관리" class="m_menu"><span>이력 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="sendManage.html"><span>메일/SNS 전송 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="commonCode.html"><img src="img/menu/m_contents_off.svg" alt="컨텐츠관리" class="m_menu"><span>공통 코드 관리</span></a></li>
+        </ul>
+    </div>
+</aside>
+<!-- 메뉴 끝 -->
+
+<section id="container">
+    <div class="admin_contents_wr">
+
+        <!-- PDF 다운로드 -->
+        <div class="admin_contents_title" style="text-align: right;">
+            <button class="pdf_download_btn"><img src="img/pdf.svg" alt="PDF 다운로드">다운로드</button>
+        </div>
+        <!-- PDF 다운로드 -->
+
+        <div class="admin_contents">
+            <div id="tableauArea">
+                <span class="tab-arrow">
+                    <div class="tab-left" onclick="moveScrollLeft()"></div>
+                </span>
+                <div class="tab-zone-margin">
+                    <div class="inline selected" onclick="moveDashboard(this)">1. PV Summary</div>
+                    <div class="inline" onclick="moveDashboard(this)">2. 발전량(발전시간)상세분석</div>
+                    <div class="inline" onclick="moveDashboard(this)">3. 일사량상세분석(기후영향)</div>
+                    <div class="inline" onclick="moveDashboard(this)">4. 일사량 상세 분석</div>
+                    <div class="inline" onclick="moveDashboard(this)">5. 성능비 상세 분석</div>
+                    <div class="inline" onclick="moveDashboard(this)">6. 인버터 개별 영향</div>
+                    <div class="inline" onclick="moveDashboard(this)">7. 스트링 개별 영향</div>
+                    <div class="inline" onclick="moveDashboard(this)">8. 인버터 개별 영향</div>
+                    <div class="inline" onclick="moveDashboard(this)">9. 가동률상세분석(인버터개별영향)</div>
+                    <div class="inline" onclick="moveDashboard(this)">10. 변압기개별영향(내부온도특성)</div>
+                    <div class="inline" onclick="moveDashboard(this)">11. 기타요인 상세 분석(절연저항)</div>
+                    <div class="inline" onclick="moveDashboard(this)">12. 기타요인 상세 분석(절연저항)</div>
+                    <div class="inline" onclick="moveDashboard(this)">13. 기타요인 상세 분석(계통안정성)</div>
+                    <div class="inline" onclick="moveDashboard(this)">14. 기타요인 상세 분석(운전방안 개선)</div>
+                </div>
+                <span class="tab-arrow">
+                    <div class="tab-right" onclick="moveScrollRight()"></div>
+                </span>
+            </div>
+            <div id="vizContainer" style="width:1400px; height:900px;"></div>
+        </div>
+    </div>
+
+    <!-- 푸터 시작 -->
+    <footer>
+        <img src="img/logo.svg" alt="로고">
+        <span>Copyright ⓒ Hanwha Energy All right reserved.</span>
+    </footer>
+    <!-- 푸터 끝 -->
+
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+    $(document).ready(function() {
+        // 메뉴 마우스오버 / 마우스아웃 이벤트
+        var menu_src;
+        var change_src;
+
+        $('.aside_list > li > a').on({
+            'mouseover':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_off", "_on");
+                $(this).children('.m_menu').attr('src', change_src);
+            },
+            'mouseout':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_on", "_off");
+                $(this).children('.m_menu').attr('src', change_src);
+            }
+        });
+
+        // 메뉴 열기
+        $('.top_menu_btn').click(function(){
+            if ($('aside').is(':visible')) {
+                $('aside').hide("slide", {direction : "left"}, 500);
+                $('.top_menu_btn > img').attr('src', 'img/side_menu_btn.svg');
+                $('.aside_list span, .sub_menu_btn, .aside_sub_list').css('display', 'none');
+            } else {
+                $('aside').show("slide", {direction : "left"}, 500);
+                $('html').css('background-color', 'rgba(0,0,0,0.5)');
+                $('.top_menu_btn > img').attr('src', 'img/close.svg');
+                $('.aside_list span, .sub_menu_btn').css('display', 'inline-block');
+                $('.aside_sub_list').css('display', 'block');
+            }
+        });
+
+        // 좌우 이동 스크롤
+        $.fn.hasScrollBar = function() {
+            return (this.prop("scrollWidth") == 0 && this.prop("clientWidth") == 0)
+                    || (this.prop("scrollWidth") > this.prop("clientWidth"));
+        };
+        function wheel(name){
+            $('.tab-zone-margin').on('mousewheel',function(e){
+                var hasScroll = $(this).hasScrollBar();
+                if(!hasScroll){
+                } else {
+                    e.preventDefault(); 
+                    var wheelDelta = e.originalEvent.wheelDelta;
+                    if(wheelDelta > 0){
+                        $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+                    }else{
+                        $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+                    }
+                }
+            });
+        }
+        $(function(){
+            wheel('.tab-zone-margin');
+        });
+
+        // 화살표 이동 스크롤
+        moveScrollLeft = function() {
+            var _scrollX = $('.tab-zone-margin').scrollLeft();
+            $('.tab-zone-margin').scrollLeft(_scrollX - 100);
+        }
+
+        moveScrollRight = function() {
+            var _scrollX = $('.tab-zone-margin').scrollLeft();
+            $('.tab-zone-margin').scrollLeft(_scrollX + 100);
+        }
+
+        // 메뉴 클릭
+        $('.inline').click(function() {
+            $(this).addClass('selected');
+            $('.inline').not($(this)).removeClass('selected');
+        });
+    });
+</script>
+</body>
+</html>

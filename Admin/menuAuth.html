@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEIS.DAP</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/content.css" type="text/css" rel="stylesheet" media="screen" />
+    <style>
+        .form_group > ul{display: flex; align-items: center; height: 34px;}
+        .form_group > ul > li{display: inline-block; position: relative; top: 0; width: 80px;}
+        .form_group::after{content: ''; display: table; clear: both;}
+    </style>
+</head>
+<body>
+<!-- 헤더 시작 -->
+<header>
+    <div class="top_menu_btn">
+        <img src="img/side_menu_btn.svg" alt="메뉴버튼">
+    </div>
+    <div class="top_logo">
+        <img src="img/logo.svg" alt="로고">
+    </div>
+    <div class="top_contents">
+        <select class="language_select" style="width: 60px;">
+            <option>KR</option>
+            <option>EN</option>
+            <option>JP</option>
+        </select>
+        <span>　</span>
+        <a href="#" class="logout_btn">
+            <span>로그아웃</span>
+        </a>
+    </div>
+</header>
+<!-- 헤더 끝 -->
+
+<!-- 메뉴 시작 -->
+<aside>
+    <div class="aside_list_wr">
+        <ul class="aside_list">
+            <li><a href="#"><img src="img/menu/m_user_off.svg" alt="사용자 관리" class="m_menu"><span>사용자 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="userManage.html"><span>사용자 정보 관리</span></a></li>
+                    <li><a href="commentManage.html"><span>평가 코멘트 관리</span></a></li>
+                    <li><a href="customerComment.html"><span>고객의 소리 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_site_off.svg" alt="사이트 관리" class="m_menu"><span>사이트 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="siteManage.html"><span>사이트 정보 관리</span></a></li>
+                    <li><a href="siteManageFacSpecLayer.html"><span>설비 모델 스펙 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_menu_off.svg" alt="데이터룰 관리" class="m_menu"><span>데이터룰 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="tagManage.html"><span>태그 관리</span></a></li>
+                    <li><a href="preProcessRuleManage.html"><span>전처리룰 관리</span></a></li>
+                    <li><a href="thresholdManage.html"><span>이상치 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_search_off.svg" alt="권한 관리" class="m_menu"><span>권한 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="menuAuth.html"><span>메뉴 권한 관리</span></a></li>
+                    <li><a href="checkAuth.html"><span>조회 권한 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_email_off.svg" alt="이력 관리" class="m_menu"><span>이력 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="sendManage.html"><span>메일/SNS 전송 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="commonCode.html"><img src="img/menu/m_contents_off.svg" alt="컨텐츠관리" class="m_menu"><span>공통 코드 관리</span></a></li>
+        </ul>
+    </div>
+</aside>
+<!-- 메뉴 끝 -->
+
+<section id="container">
+    <div class="admin_contents_wr">
+
+        <!-- 컨텐츠 제목 -->
+        <div class="admin_contents_title">메뉴권한관리</div>
+        <!-- 컨텐츠 제목 -->
+
+        <div class="admin_part_wr">
+
+            <!-- 메뉴 목록 시작 (1단) -->
+            <div class="admin_part_list">
+                <span class="admin_contents_sub_title">메뉴권한목록</span>
+                <div style="clear:both"></div>
+                <ul class="admin_menu_list">
+                    <li class="menu_focus"><a href="#">Admin</a></li>
+                    <li><a href="#">Operator</a></li>
+                    <li><a href="#">Installer</a></li>
+                    <li><a href="#">Q&M</a></li>
+                    <li><a href="#">Invoice</a></li>
+                    <li><a href="#">Customer</a></li>
+                </ul>
+                <div class="menu_btn_wr">
+                    <button class="btn add" alt="추가" style="width: 100%;">추가</a>
+                </div>
+            </div>
+            <!-- 메뉴 목록 끝 (1단) -->
+
+            <!-- 컨텐츠 시작 (2단) -->
+            <div class="admin_part_contents">
+
+                <!-- 컨텐츠 목록 시작 -->
+                <span class="admin_contents_sub_title">Admin</span>
+                <ul class="admin_contents_list">
+                    <li>
+                        <img src="img/side_down_arrow.svg" alt="하위메뉴">
+                        <input type="checkbox" id="dashboard" checked>
+                        <label for="dashboard">대시보드</label>
+                        
+                        <ul class="admin_contents_sub_list">
+                            <li>
+                                <input type="checkbox" id="sub1-1" checked>
+                                <label for="sub1-1">자산현황</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sub1_2" checked>
+                                <label for="sub1_2">알람현황</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sub1_3">
+                                <label for="sub1_3">사이트별 운전현황</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu2" checked>
+                        <label for="menu2">사업관리</label>
+                    </li>
+                     <li>
+                        <input type="checkbox" id="menu3" checked>
+                        <label for="menu3">유지보수</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="menu4" checked>
+                        <label for="menu4">작업지시관리</label>
+                    </li>
+                    <li>
+                        <img src="img/side_down_arrow.svg" alt="하위메뉴">
+                        <input type="checkbox" id="menu5" checked>
+                        <label for="menu5">통계</label>
+
+                        <ul class="admin_contents_sub_list">
+                            <li>
+                                <input type="checkbox" id="sub5-1" checked>
+                                <label for="sub5-1">발전량 분석</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sub5-2" checked>
+                                <label for="sub5-2">총방전량 분석</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sub5-3" checked>
+                                <label for="sub5-3">알람 분석</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sub5-4" checked>
+                                <label for="sub5-4">파라미터 분석</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sub5-5" checked>
+                                <label for="sub5-5">Work Order 분석</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sub5-6" checked>
+                                <label for="sub5-6">Installer 분석</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sub5-7" checked>
+                                <label for="sub5-7">수익 분석</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="img/side_up_arrow.svg" alt="하위메뉴">
+                        <input type="checkbox" id="menu6">
+                        <label for="menu6">예측/최적화</label>
+
+                        <ul class="admin_contents_sub_list hidden">
+                            <li>
+                                <input type="checkbox" id="sub6-1" checked>
+                                <label for="sub6-1">예측</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sub6-2" checked>
+                                <label for="sub6-2">최적화</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- 컨텐츠 목록 끝 -->
+
+                <!-- 컨텐츠 내역 시작 -->
+                <div class="admin_contents_section">
+                    
+                    <div class="form_group">
+                        <label for="program_code">프로그램코드</label>
+                        <input type="text" id="program_code" value="MENU01001" disabled>
+                    </div>
+                    <div class="form_group">
+                        <label for="menu_kr">메뉴명(한국어)</label>
+                        <input type="text" id="menu_kr" value="대시보드">
+                    </div>
+                    <div class="form_group">
+                        <label for="menu_en">메뉴명(영어)</label>
+                        <input type="text" id="menu_en" value="Overview">
+                    </div>
+                    <div class="form_group">
+                        <label for="menu_jp">메뉴명(일어)</label>
+                        <input type="text" id="menu_jp" value="ダッシュボード">
+                    </div>
+                    <div class="form_group">
+                        <label style="height: 150px;">알림설정</label> <!-- 변경 -->
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="alarmView" name="alarmView" disabled>
+                                <label for="alarmView">조회</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="alarmSave" name="alarmSave" disabled>
+                                <label for="alarmSave">등록</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="alarmModify" name="alarmModify" disabled>
+                                <label for="alarmModify">수정</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="alarmDelete" name="alarmDelete" disabled>
+                                <label for="alarmDelete">삭제</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+                <!-- 컨텐츠 내역 끝 -->
+
+                <!-- 삭제 / 수정 버튼 시작 -->
+                <div class="btn_section2"> <!-- (변경) -->
+                    <button class="btn delete" alt="삭제">삭제</button> <!-- (변경) -->
+                    <button class="btn modify" alt="수정">수정</button> <!-- (변경) -->
+                </div>
+                <!-- 삭제 / 수정 버튼 시작 -->
+            </div>
+            <!-- 컨텐츠 끝 (2단) -->
+        </div>
+    </div>
+
+    <!-- 푸터 시작 -->
+    <footer>
+        <img src="img/logo.svg" alt="로고">
+        <span>Copyright ⓒ Hanwha Energy All right reserved.</span>
+    </footer>
+    <!-- 푸터 끝 -->
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // 메뉴 마우스오버 / 마우스아웃 이벤트
+        var menu_src;
+        var change_src;
+
+        $('.aside_list > li > a').on({
+            'mouseover':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_off", "_on");
+                $(this).children('.m_menu').attr('src', change_src);
+            },
+            'mouseout':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_on", "_off");
+                $(this).children('.m_menu').attr('src', change_src);
+            }
+        });
+
+        // 메뉴 on / off시 메뉴 / 컨텐츠 / 푸터 너비 변경 이벤트
+        $('.top_menu_btn').click(function(){
+            if ($('aside').is(':visible')) {
+                $('aside').hide("slide", {direction : "left"}, 500);
+                $('.top_menu_btn > img').attr('src', 'img/side_menu_btn.svg');
+                $('.aside_list span, .sub_menu_btn, .aside_sub_list').css('display', 'none');
+            } else {
+                $('aside').show("slide", {direction : "left"}, 500);
+                $('html').css('background-color', 'rgba(0,0,0,0.5)');
+                $('.top_menu_btn > img').attr('src', 'img/close.svg');
+                $('.aside_list span, .sub_menu_btn').css('display', 'inline-block');
+                $('.aside_sub_list').css('display', 'block');
+            }
+        });
+    });
+</script>
+</body>
+</html>

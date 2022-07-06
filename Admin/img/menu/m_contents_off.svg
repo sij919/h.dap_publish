@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.667" viewBox="0 0 16 12.667">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="newspaper" transform="translate(0 -53.333)">
+        <g id="그룹_44" transform="translate(1.333 53.333)">
+            <g id="그룹_43">
+                <path id="패스_23" d="M55.666 53.333H44.333A1.668 1.668 0 0 0 42.666 55v9.333a.333.333 0 1 0 .667 0V55a1 1 0 0 1 1-1h11.333a1 1 0 0 1 1 1v9.333a1 1 0 0 1-1 1H43A.333.333 0 1 0 43 66h12.666a1.668 1.668 0 0 0 1.667-1.667V55a1.668 1.668 0 0 0-1.667-1.667z" class="cls-1" transform="translate(-42.666 -53.333)"/>
+            </g>
+        </g>
+        <g id="그룹_46" transform="translate(0 55.333)">
+            <g id="그룹_45">
+                <path id="패스_24" d="M3 127.333H1.667a1 1 0 0 1-1-1V119a1 1 0 0 1 1-1 .333.333 0 1 0 0-.667A1.668 1.668 0 0 0 0 119v7.333A1.668 1.668 0 0 0 1.667 128H3a.333.333 0 0 0 0-.667z" class="cls-1" transform="translate(0 -117.333)"/>
+            </g>
+        </g>
+        <g id="그룹_48" transform="translate(2.667 59.333)">
+            <g id="그룹_47">
+                <path id="패스_25" d="M91 245.333h-5.334a.333.333 0 0 0-.333.333v4a.333.333 0 0 0 .333.333H91a.333.333 0 0 0 .333-.333v-4a.333.333 0 0 0-.333-.333zm-.333 4H86V246h4.667z" class="cls-1" transform="translate(-85.333 -245.333)"/>
+            </g>
+        </g>
+        <g id="그룹_50" transform="translate(9.333 59.333)">
+            <g id="그룹_49">
+                <path id="패스_26" d="M303.666 245.333H299a.333.333 0 1 0 0 .667h4.667a.333.333 0 1 0 0-.667z" class="cls-1" transform="translate(-298.666 -245.333)"/>
+            </g>
+        </g>
+        <g id="그룹_52" transform="translate(9.333 61.333)">
+            <g id="그룹_51">
+                <path id="패스_27" d="M303.666 309.333H299a.333.333 0 1 0 0 .667h4.667a.333.333 0 0 0 0-.667z" class="cls-1" transform="translate(-298.666 -309.333)"/>
+            </g>
+        </g>
+        <g id="그룹_54" transform="translate(9.333 63.333)">
+            <g id="그룹_53">
+                <path id="패스_28" d="M303.666 373.333H299a.333.333 0 1 0 0 .667h4.667a.333.333 0 1 0 0-.667z" class="cls-1" transform="translate(-298.666 -373.333)"/>
+            </g>
+        </g>
+        <g id="그룹_56" transform="translate(2.667 57.333)">
+            <g id="그룹_55">
+                <path id="패스_29" d="M97 181.333H85.666a.333.333 0 0 0 0 .667H97a.333.333 0 1 0 0-.667z" class="cls-1" transform="translate(-85.333 -181.333)"/>
+            </g>
+        </g>
+        <g id="그룹_58" transform="translate(2.667 55.333)">
+            <g id="그룹_57">
+                <path id="패스_30" d="M97 117.333H85.666a.333.333 0 1 0 0 .667H97a.333.333 0 1 0 0-.667z" class="cls-1" transform="translate(-85.333 -117.333)"/>
+            </g>
+        </g>
+    </g>
+</svg>

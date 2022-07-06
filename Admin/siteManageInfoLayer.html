@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEIS.DAP</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/content.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/popup.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/calendar.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+<body>
+    <!-- 헤더 시작 -->
+    <header>
+        <div class="top_menu_btn">
+            <img src="img/side_menu_btn.svg" alt="메뉴버튼">
+        </div>
+        <div class="top_logo">
+            <img src="img/logo.svg" alt="로고">
+        </div>
+        <div class="top_contents">
+            <select class="language_select" style="width: 60px;">
+                <option>KR</option>
+                <option>EN</option>
+                <option>JP</option>
+            </select>
+            <span>　</span>
+            <a href="#" class="logout_btn">
+                <span>로그아웃</span>
+            </a>
+        </div>
+    </header>
+    <!-- 헤더 끝 -->
+    
+    <!-- 메뉴 시작 -->
+    <aside>
+        <div class="aside_list_wr">
+            <ul class="aside_list">
+                <li><a href="#"><img src="img/menu/m_user_off.svg" alt="사용자 관리" class="m_menu"><span>사용자 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                    <ul class="aside_sub_list">
+                        <li><a href="userManage.html"><span>사용자 정보 관리</span></a></li>
+                        <li><a href="commentManage.html"><span>평가 코멘트 관리</span></a></li>
+                        <li><a href="customerComment.html"><span>고객의 소리 관리</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="img/menu/m_site_off.svg" alt="사이트 관리" class="m_menu"><span>사이트 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                    <ul class="aside_sub_list">
+                        <li><a href="siteManage.html"><span>사이트 정보 관리</span></a></li>
+                        <li><a href="siteManageFacSpecLayer.html"><span>설비 모델 스펙 관리</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="img/menu/m_menu_off.svg" alt="데이터룰 관리" class="m_menu"><span>데이터룰 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                    <ul class="aside_sub_list">
+                        <li><a href="tagManage.html"><span>태그 관리</span></a></li>
+                        <li><a href="preProcessRuleManage.html"><span>전처리룰 관리</span></a></li>
+                        <li><a href="thresholdManage.html"><span>이상치 관리</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="img/menu/m_search_off.svg" alt="권한 관리" class="m_menu"><span>권한 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                    <ul class="aside_sub_list">
+                        <li><a href="menuAuth.html"><span>메뉴 권한 관리</span></a></li>
+                        <li><a href="checkAuth.html"><span>조회 권한 관리</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="img/menu/m_email_off.svg" alt="이력 관리" class="m_menu"><span>이력 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                    <ul class="aside_sub_list">
+                        <li><a href="sendManage.html"><span>메일/SNS 전송 관리</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="commonCode.html"><img src="img/menu/m_contents_off.svg" alt="컨텐츠관리" class="m_menu"><span>공통 코드 관리</span></a></li>
+            </ul>
+        </div>
+    </aside>
+    <!-- 메뉴 끝 -->
+    
+    <section id="container">
+        <div class="admin_contents_wr">
+    
+            <!-- 컨텐츠 제목 -->
+            <div class="admin_contents_title">사이트 정보 관리</div>
+            <!-- 컨텐츠 제목 -->
+    
+            <div class="admin_contents">
+                <div class="form_section">
+
+                    <!-- 입력 폼(1단) 시작 -->
+                    <div class="form_part" style="padding-right: 20px;">
+                        <div class="form_group">
+                            <label for="siteId">사이트ID</label>
+                            <input type="text" id="siteId">
+                            <!-- <span class="valid_check">유효성검사</span> --> <!-- 유효성 검사 부분에 추가-->
+                        </div>
+
+                        <div class="form_group">
+                            <label for="siteName">사이트명</label>
+                            <input type="password" id="siteName">
+                            <!-- <span class="valid_check">유효성검사</span> --> <!-- 유효성 검사 부분에 추가-->
+                        </div>
+
+                        <div class="form_group">
+                            <label for="siteSpc">SPC</label>
+                            <input type="password" id="spc">
+                        </div>
+                        
+                        <div class="form_group"> <!-- 변경 -->
+                            <label for="address">주소</label>
+                            <div class="address_section">
+                                <div>
+                                    <input type="text" id="siteAddressNum">
+                                    <button class="address" alt="우편번호검색" style="width: 75px;">우편번호</button>
+                                </div>
+                                <input type="text" id="siteAddress01" placeholder="주소" style="margin-bottom: 10px;">
+                                <input type="text" id="siteAddress02" placeholder="상세주소">
+                            </div>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="regionSection">지역구분</label>
+                            <input type="text" id="regionSection">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="timeZone">타임존</label>
+                            <input type="text" id="timeZone">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="bizSection">사업구분</label>
+                            <input type="text" id="bizSection">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="directYn">한화에너지직영여부</label>
+                            <ul>
+                                <li><input type="radio" id="directY" name="direct" checked>
+                                    <label for="directY">Y</label>
+                                </li>
+                                <li><input type="radio" id="directN" name="direct">
+                                    <label for="directN">N</label>
+                                </li>  
+                            </ul>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="pvKwp">PV용량(kWp)</label>
+                            <input type="text" id="pvKwp">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="pcsKw">PCS용량(kW)</label>
+                            <input type="text" id="pcsKw">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="batKwh">BAT용량(kWh)</label>
+                            <input type="text" id="batKwh">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="cod">COD</label>
+                            <div class="calendar_box">
+                                <input type="text" id="calDay" style="width: 100%;">
+                                <label for="calDay"><img src="img/calendar.svg" alt="달력"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 입력 폼(1단) 끝 -->
+
+                    <!-- 입력 폼(2단) 시작 -->
+                    <div class="form_part">
+                        <div class="form_group">
+                            <label for="ppa">PPA단가</label>
+                            <input type="text" id="ppa">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="currencyUnit">통화단위</label>
+                            <input type="text" id="currencyUnit">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="installType">설치유형</label>
+                            <input type="text" id="installType">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="useYn">사용여부</label>
+                            <ul>
+                                <li><input type="radio" id="useY" name="use" checked>
+                                    <label for="useY">Y</label>
+                                </li>
+                                <li><input type="radio" id="useN" name="use">
+                                    <label for="useN">N</label>
+                                </li>  
+                            </ul>
+                        </div>
+
+                        <!-- <div class="form_group" style="margin-bottom: 0;">
+                            <label for="uploadFile">첨부파일</label>
+                            <div style="width: 100%; margin-left: 140px;">
+                                <div class="upload_section">
+                                    <input class="upload_input" value="파일선택" readonly>
+                                    <label for="uploadFile"><img src="img/upload.svg" alt="업로드"></label>
+                                    <input type="file" id="uploadFile">
+                                </div>
+
+                                <div class="auth_btn">
+                                    <a href="#"><img src="img/add.svg"></a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div class="form_group">
+                            <label for="uploadFile">첨부파일</label>
+                            <div style="width: 100%; margin-left: 140px;">
+                                <button class="btn ok" onclick="location.href='fileAdd.html'">첨부파일</button>
+                            </div>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="qm">Q&M사</label>
+                            <input type="text" id="qm">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="epc">EPC사</label>
+                            <input type="text" id="epc">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="serviceType">서비스유형</label>
+                            <ul>
+                                <li><input type="radio" id="chargeY" name="charge" checked>
+                                    <label for="chargeY">Y</label>
+                                </li>
+                                <li><input type="radio" id="chargeN" name="charge">
+                                    <label for="chargeN">N</label>
+                                </li>  
+                            </ul>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="serviceTime">서비스기간</label>
+                            <ul class="calendar_box">
+                                <li>
+                                    <input type="text" id="calDayFrom">
+                                    <label for="calDayFrom"><img src="img/calendar.svg" alt="달력"></label>
+                                </li>
+                                <li>
+                                    <input type="text" id="calDayTo">
+                                    <label for="calDayTo"><img src="img/calendar.svg" alt="달력"></label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="legacySystem">레거시시스템</label>
+                            <input type="text" id="legacySystem">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="IF">I/F방식</label>
+                            <input type="text" id="IF">
+                        </div>
+
+                        <div class="form_group">
+                            <label for="analysisYn">분석여부</label>
+                            <ul>
+                                <li><input type="radio" id="analysisY" name="analysis" checked>
+                                    <label for="analysisY">Y</label>
+                                </li>
+                                <li><input type="radio" id="analysisN" name="analysis">
+                                    <label for="analysisN">N</label>
+                                </li>  
+                            </ul>
+                        </div>
+
+                        <!-- <div class="form_group">
+                            <label for="addInfo">추가정보</label>
+                            <input type="text" id="addInfo">
+                            <table class="info_section">
+                                <tr>
+                                    <td colspan="4">
+                                        <button class="btn reset" alt="초기화" style="font-size: 12px;">초기화</button>
+                                        <button class="btn add" alt="추가" style="font-size: 12px;">추가</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="info_item">항목명</td>
+                                    <td class="info_data">
+                                        <select id="itemName" name="itemName" style="background-position: 90% 50%;">
+                                            <option>선택</option>
+                                            <option>항목01</option>
+                                            <option>항목02</option>
+                                        </select>
+                                    </td>
+                                    <td class="info_item">항목값</td>
+                                    <td class="info_data"><input type="text" id="itemValue"></td>
+                                </tr>
+                            </table>
+                        </div> -->
+
+                        <div class="form_group">
+                            <label for="addInfo">추가정보</label>
+                            <div style="width: 100%; margin-left: 140px;">
+                                <button class="btn ok" onclick="location.href='addInfo.html'">추가정보</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 입력 폼(2단) 끝 -->
+                </div>
+                <!-- 입력 폼 영역 끝 -->
+
+                <!-- 취소 / 저장 버튼 시작 -->
+                <div class="btn_section2">
+                    <button type="reset" class="btn cancel" alt="취소">취소</button>
+                    <button type="submit" class="btn add" alt="저장">저장</button>
+                </div>
+                <!-- 취소 / 저장 버튼 끝 -->
+            </div>
+        </div>
+        
+        <!-- 푸터 시작 -->
+        <footer>
+            <img src="img/logo.svg" alt="로고">
+            <span>Copyright ⓒ Hanwha Energy All right reserved.</span>
+        </footer>
+        <!-- 푸터 끝 -->
+    </section>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/bootstrap-datetimepicker.js"></script>
+<script src="js/bootstrap-datetimepicker.ko.js"></script>
+<script>
+    $(document).ready(function() {
+        // 메뉴 마우스오버 / 마우스아웃 이벤트
+        var menu_src;
+        var change_src;
+
+        $('.aside_list > li > a').on({
+            'mouseover':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_off", "_on");
+                $(this).children('.m_menu').attr('src', change_src);
+            },
+            'mouseout':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_on", "_off");
+                $(this).children('.m_menu').attr('src', change_src);
+            }
+        });
+
+        // 메뉴 on / off시 메뉴 / 컨텐츠 / 푸터 너비 변경 이벤트
+        $('.top_menu_btn').click(function(){
+            if ($('aside').is(':visible')) {
+                $('aside').hide("slide", {direction : "left"}, 500);
+                $('.top_menu_btn > img').attr('src', 'img/side_menu_btn.svg');
+                $('.aside_list span, .sub_menu_btn, .aside_sub_list').css('display', 'none');
+            } else {
+                $('aside').show("slide", {direction : "left"}, 500);
+                $('html').css('background-color', 'rgba(0,0,0,0.5)');
+                $('.top_menu_btn > img').attr('src', 'img/close.svg');
+                $('.aside_list span, .sub_menu_btn').css('display', 'inline-block');
+                $('.aside_sub_list').css('display', 'block');
+            }
+        });
+
+        // 달력(Day)
+        $('#calDay, #calDayFrom, #calDayTo').datetimepicker({
+            language: 'ko',
+            format: 'yyyy-mm-dd',
+            minView: 'month', // 최소 depth
+            maxView: 'month', // 최대 depth
+            weekStart: 0, // sun(0) - sat(6)
+            todayBtn:  1,
+            autoclose: 1,
+            startView: 2, // 0 : hour / 1 : day / 2 : month / 3 : year / 4 : decade(10year)
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+#modal{background-color: #ffffff; position: absolute; width: 100%; height: 100%; overflow-x: hidden; -ms-overflow-style: none;}
+.modalOverlay{position: fixed; top: 0px; margin: 0px; z-index: 1000; width: 100%; height: 100%; background: rgba(0,0,0,0.5);}
+#modal::-webkit-scrollbar{display: none;}
+#modal2, #modal4, #modal5{position: fixed; top: 0px; margin: 0px; z-index: 9999; width: 100%; height: 100%; background: rgba(0,0,0,0.5);}
+#modal2 > div, #modal4 > div, #modal5 > div{position: fixed; top: 50%; left: 50%; width: 700px; height: 500px; color: #1d1d1d; background-color: #fff;}
+#modal3{position: fixed; top: 0px; margin: 0px; z-index: 100; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: none;}
+#modal3 > div{position: fixed; top: 50%; left: 50%; color: #1d1d1d; background-color: #fff;}
+.modal_top{width: 100%; height: 65px; padding-top: 20px; padding-bottom: 20px; border-bottom: 1px solid #f2f2f2;}
+.modal_top > span{font-size: 18px; padding-left: 20px;}
+.modal_top > span > img{float: right; margin-top: 5px; padding-right: 20px;}
+
+.alert_wr{width: 100%; text-align: center; padding: 50px 30px 15px 30px;}
+.alert_wr > div {display: flex; justify-content: center; align-items: center; margin-bottom: 40px;}
+.alert_wr > div > img{width: 40px; margin-right: 20px;}
+
+/* form */
+.form_section{position: relative; width: 100%; height: calc(100% - 65px); overflow-y: auto; overflow-x: hidden; padding: 20px;}
+.popup_section{width: 100%; margin-bottom: 20px; overflow-y: auto; overflow-x: hidden; padding: 20px;}
+.form_section::after, .admin_search_wr > div::after{content: ''; display: table; clear: both;}
+.form_part{float: left; width: 50%; height: 100%;}
+.form_group{margin-bottom: 10px;}
+.form_group > label{float: left; width: 140px; height: 34px; line-height: 34px;}
+.form_group input, .form_group select, .form_group textarea{display: inline-block; width: calc(100% - 140px);}
+.form_group > ul{display: table; width: calc(100% - 140px); height: 34px;}
+.form_group > ul > li{display: table-cell; vertical-align: middle;}
+.form_group > span{display: inline-block; width: calc(100% - 140px); overflow-wrap: break-word; vertical-align: middle; line-height: 34px;}
+.form_group > ul > span{display: table-cell; vertical-align: middle; height: 34px;}
+.form_group > ul > li:first-of-type{width: 120px;}
+.form_group::after{content: ''; display: table; clear: both;}
+
+.valid_check{display: block; color: #d80000; font-size: 12px; margin-left: 140px;}
+
+.auth_btn{display: inline-block; width: 75px; padding-top: 5px; vertical-align: top; position: absolute; margin-left: 3px;}
+.auth_btn img{float: left; width: 18px; height: 18px; vertical-align: middle; margin-top: 3px; margin-right: 3px;}
+.auth_btn span:hover{font-weight: 600;}
+
+.address_section{margin-left: 140px;}
+.address_section > div{position: relative; margin-bottom: 10px;}
+.address_section > div > input{width: calc(100% - 80px) !important; margin-right: 5px;}
+.address_section input{width: 100%;}
+
+/* form - file upload */
+.upload_section{position: relative; width: 90%; height: 34px; text-align: center; margin: 20px;}
+.upload_section label{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #f47423;
+    border: 1px solid #f47423;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+#uploadIcon{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -17px;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    background: url('../img/upload.svg') no-repeat center center;
+    background-size: 22px 22px;
+}
+.file_section_wr{width: 100%; overflow-y: auto; overflow-x: hidden;}
+.file_section{width: 100%;}
+.file_section tr{height: 40px; border-bottom: 1px solid #e4e4e4;}
+.file_section thead tr:nth-child(1){font-weight: bold;}
+.file_section input[type="checkbox"] + label:before, .file_section input[type="checkbox"] + label:after{top: -15px !important;}
+.file_section td{text-align: center;}
+.upload_header{width: 100%; border:2px solid #f47423;}
+.upload_header > table{width: 100%; text-align: center;}
+.upload_header > table > tbody > tr > td:first-child{font-weight: bold; color: #f47423}
+
+/* login */
+#login_wr{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 550px; /* 추가 */
+    background-color: #f6f6f6;
+}
+#login_wr > div{width: 460px; text-align: center;}
+#login_wr > div > .logo{display: inline-block; width: 200px; height: 66px; margin-bottom: 24px; background: url('../img/logo.png') no-repeat center center/100% 100%;}
+.login_input{
+    height: 48px;
+    border: 1px solid #e3e3e3;
+    color: #9f9f9f;
+    padding: 14px 12px;
+    font-size: 14px;
+}
+.login_contents{margin-bottom: 8px;}
+.login_check_wr{text-align: left; margin: 16px 0;}
+.btn.login{
+    width: 100%;
+    height: 54px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #152b41;
+    padding: 15px;
+    text-align: center;
+    border: 0;
+}
+.copyright{
+    position: absolute;
+    left: 0;
+    bottom: 18px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #9f9f9f;
+}
+.copyright > span{
+    bottom: 68px;
+    width: 100%;
+}
+.copyright > span > a{
+    display: inline-block;
+    font-size: 12px;
+    color: #9f9f9f !important;
+}
+.copyright > span > a:nth-child(1):after{content: " │";}
+.copyright > hr{
+    width: 460px;
+    margin: 10px auto;
+    border: 1px solid #e3e3e3;
+}
+
+/* menuAuth popup */
+.popup_contents_list{
+    float: left;
+    width: 100%;
+    padding: 20px 0 5px 45px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.popup_contents_list label{margin-bottom: 15px;}
+.popup_contents_list img{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    padding: 11px 8.5px 11px 9px;
+    vertical-align: middle;
+    margin-top: -8px;
+    margin-left: -31px;
+}
+.popup_contents_sub_list{padding-left: 10px;}
+
+/* checkAuth popup */
+.popup_site_section_01, .popup_site_section_02{width: 50%; height: 100%; float: left;}
+.popup_site_section_01 span, .popup_site_section_02 span{
+    display: inline-block;
+    width: 20%;
+    min-width: 150px;
+    font-size: 16px;
+    margin-left: 14px;
+    padding-bottom: 10px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+.popup_site_section_01 span{border-bottom: 2px solid #cc3232;}
+.popup_site_section_02 span{border-bottom: 2px solid #6ebbff;}
+.popup_site_list{position: relative; height: calc(100% - 58px); padding: 10px 15px;}
+.popup_site_sub_list{position: absolute; overflow-y: auto; overflow-x: hidden; width: calc(100% - 15px); height: calc(100% - 48px); padding-left: 15px; padding-bottom: 15px;}
+.popup_site_sub_list li{word-wrap: break-word; margin-left: 15px;}
+.popup_site_sub_list li label{width: 100%;}
+.popup_site_search{width: 100%; display: flex; align-items: center; margin-bottom: 10px;}
+.popup_site_check{width: 60px; margin-left: 10px; margin-right: 5px;}
+
+/* 추가 */
+#privacyModal, #serviceModal{position: fixed; top: 0px; margin: 0px; z-index: 9999; width: 100%; height: 100%; background: rgba(0,0,0,0.5);}
+#privacyModal > div, #serviceModal > div{position: fixed; top: 50%; left: 50%; width: 700px; height: 500px; color: #1d1d1d; background-color: #fff;}
+.p_table{
+    border: 1px solid #f2f2f2;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+    table-layout: fixed;
+}
+.p_table th, .p_table td{
+    border: 1px solid #f2f2f2;
+    overflow-wrap: break-word;
+}
+.p_table td{
+    padding: 9px 13px;
+}
+.p_table th{
+    background-color: #f6f6f6;
+    color: #666666;
+    font-weight: bold;
+    padding: 7px;
+}
+.link:hover{
+    text-decoration: underline;
+}
+.txt_b{font-weight: bold;}

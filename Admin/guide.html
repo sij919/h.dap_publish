@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>가이드</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/content.css" type="text/css" rel="stylesheet" media="screen" />
+    <style>
+        #container{width: 100%; padding-left: 0px;}
+        footer{width: 100%; padding-left: 0px;}
+        .table > tbody > tr:hover{background: transparent}
+        .admin_part_list{width: 500px; height: 300px;}
+        .table th{border-bottom: 0;}
+    </style>
+</head>
+
+<body>
+<!-- 헤더 시작 -->
+<header>
+    <div class="top_menu_btn">
+        <img src="img/side_menu_btn.svg" alt="메뉴버튼">
+    </div>
+    <div class="top_logo">
+        <img src="img/logo.svg" alt="로고">
+    </div>
+    <div class="top_contents">
+        <select class="language_select" style="width: 60px;">
+            <option>KR</option>
+            <option>EN</option>
+            <option>JP</option>
+        </select>
+        <span>　</span>
+        <a href="#" class="logout_btn">
+            <span>로그아웃</span>
+        </a>
+    </div>
+</header>
+<!-- 헤더 끝 -->
+
+<section id="container">
+    <div class="admin_contents_wr">
+
+        <!-- 컨텐츠 제목 -->
+        <div class="admin_contents_title">Guide</div>
+        <!-- 컨텐츠 제목 -->
+
+        <div class="admin_contents">
+            <h1>* 유효성 검사</h1>
+            - html 추가 <i>(ex. class="valid_check")</i><br />
+            <xmp><span class="valid_check">유효성검사</span></xmp> : 유효성 검사가 필요한 input box 아래 추가<br /><br />
+
+            <div style="clear:both;"></div><br />
+
+            <h1>* 숨기기</h1>
+            - 클래스 추가 <i>(ex. class="hidden")</i><br />
+            .hidden : 메뉴 등 해당 영역을 숨길 시 적용<br />
+
+            <div style="clear:both;"></div><br /><br />
+
+            <h1>* pagination</h1>
+            - 클래스 추가 <i>(ex. class="page_focus")</i><br />
+            .page_focus : 해당 페이지 번호 활성화 시 적용<br />
+
+            <table class="table">
+                <colgroup>
+                    <col style="width: 200px; background-color: #e2e2e2;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>형태</th>
+                        <th>
+                            <!-- 페이징 시작 -->
+                            <div class="admin_pagination_wr">
+                                <ul class="admin_pagination">
+                                    <li>
+                                        <a href="#" class="page_link">
+                                            <img src="img/backward.svg" alt="첫페이지로 이동">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="page_link">
+                                            <img src="img/prev.svg" alt="이전페이지로 이동">
+                                        </a>
+                                    </li>
+                                    <li><a href="#" class="page_focus">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" class="page_link">
+                                            <img src="img/next.svg" alt="다음페이지로 이동">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="page_link">
+                                            <img src="img/forward.svg" alt="마지막페이지로 이동">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 페이징 끝 -->
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>클래스명</th>
+                        <th>.page_focus</th>
+                    </tr>
+                </tbody>
+            </table>
+            
+
+            <div style="clear:both;"></div><br />
+
+            <h1>* 2단 구조 메뉴 리스트</h1>
+            - 클래스 추가 <i>(ex. class="menu_focus")</i><br />
+            .menu_focus : 활성화된 메뉴에 적용<br /><br />
+
+            <table class="table">
+                <colgroup>
+                    <col style="width: 200px; background-color: #e2e2e2;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>형태</th>
+                        <td>
+                            <ul class="admin_menu_list" style="width: 600px;">
+                                <li class="menu_focus"><a href="#">Menu1</a></li>
+                                <li><a href="#">Menu2</a></li>
+                                <li><a href="#">Menu3</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>클래스명</th>
+                        <th>.menu_focus</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="clear:both;"></div><br />
+
+            <h1>* 2단 구조 서브 메뉴 구분 리스트</h1>
+            - 클래스 추가 <i>(ex. class="list_focus")</i><br />
+            .list_focus : 선택한 메뉴의 활성화된 서브메뉴에 적용<br /><br />
+
+            <table class="table">
+                <colgroup>
+                    <col style="width: 200px; background-color: #e2e2e2;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>형태</th>
+                        <td>
+                            <ul class="admin_contents_partlist">
+                                <li class="list_focus"><a href="#">전체</a></li>
+                                <li><a href="#">설비</a></li>
+                                <li><a href="#">VCB01</a></li>
+                                <li><a href="#">TR01</a></li>
+                                <li><a href="#">ACB01</a></li>
+                                <li><a href="#">IN01</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>클래스명</th>
+                        <th>.list_focus</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="clear:both;"></div><br />
+
+            <h1>* tab menu</h1>
+            - 클래스 추가 <i>(ex. class="tab_focus")</i><br />
+            .menu_focus : 활성화된 탭 메뉴에 적용<br /><br />
+
+            <table class="table">
+                <colgroup>
+                    <col style="width: 200px; background-color: #e2e2e2;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>형태</th>
+                        <td>
+                            <!-- 탭 메뉴 시작 -->
+                            <ul class="admin_tab_menu" style="width: 600px;">
+                                <li data-id="tab-1" class="tab_focus">Menu 1</a></li>
+                                <li data-id="tab-2">Menu 2</a></li>
+                            </ul>
+                            <!-- 탭 메뉴 끝 -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>클래스명</th>
+                        <th>.tab_focus</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="clear:both;"></div><br />
+
+            <h1>* button</h1>
+            - 클래스 추가 <i>(ex. 추가 버튼 : class="btn add")</i><br />
+            .btn : 기본 / .add : 추가 / .cancel : 취소 / .modify : 수정 / .delete : 삭제 버튼<br /><br />
+
+            <table class="table">
+                <colgroup>
+                    <col style="width: 200px; background-color: #e2e2e2;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>종류</th>
+                        <th>저장</th>
+                        <th>확인</th>
+                        <th>수정</th>
+                        <th>취소</th>
+                        <th>삭제</th>
+                        <th>추가 / 등록</th>
+                        <th>일괄등록</th>
+                        <th>설비/KPI 일괄등록</th>
+                        <th>설비/KPI 관리</th>
+                        <th>답변</th>
+                        <th>일괄전송</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>형태</th>
+                        <td class="txt_c"><button class="btn add" alt="저장">저장</button></td>
+                        <td class="txt_c"><button class="btn ok" alt="확인">확인</button></td>
+                        <td class="txt_c"><button class="btn modify" alt="수정">수정</button></td>
+                        <td class="txt_c"><button class="btn cancel" alt="취소">취소</button></td>
+                        <td class="txt_c"><button class="btn delete" alt="삭제">삭제</button></td>
+                        <td class="txt_c"><button class="btn add" alt="추가">추가</button><br /><br />
+                            <button class="btn add" alt="등록">등록</button><br /><br />
+                            <button class="btn add" alt="신규등록">신규등록</button>
+                        </td>
+                        <td class="txt_c"><button class="btn group_add_1" alt="일괄등록">일괄등록</button></td>
+                        <td class="txt_c"><button class="btn group_add_2" alt="설비일괄등록">설비 일괄등록</button><br /><br />
+                                          <button class="btn group_add_2" alt="KPI일괄등록">KPI 일괄등록</button></td>
+                        <td class="txt_c"><button class="btn manage" alt="설비관리">설비관리</button><br /><br />
+                                          <button class="btn manage" alt="KPI관리">KPI 관리</button></td>
+                        <td class="txt_c"><button class="btn answer" alt="답변">답변</button></td>
+                        <td class="txt_c"><button class="btn send" alt="일괄전송">일괄전송</button></td>
+                    </tr>
+                    <tr>
+                        <th>클래스명</th>
+                        <th>btn save</th>
+                        <th>btn ok</th>
+                        <th>btn modify</th>
+                        <th>btn cancel</th>
+                        <th>btn delete</th>
+                        <th>btn add</th>
+                        <th>btn group_add_1</th>
+                        <th>btn group_add_2</th>
+                        <th>btn manage</th>
+                        <th>btn answer</th>
+                        <th>btn send</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="clear:both;"></div><br />
+
+            <h1>* select box</h1>
+
+            <table class="table">
+                <colgroup>
+                    <col style="width: 200px; background-color: #e2e2e2;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>형태</th>
+                        <td>
+                            <div class="search_group">
+                                <label>제목</label>
+                                <select>
+                                    <option>검색1</option>
+                                    <option>검색2</option>
+                                    <option>검색3</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="clear:both;"></div><br />
+
+            <h1>* pdf download button</h1>
+
+            <table class="table">
+                <colgroup>
+                    <col style="width: 200px; background-color: #e2e2e2;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>형태</th>
+                        <td class="txt_c"><button class="pdf_download_btn"><img src="img/pdf.svg" alt="PDF 다운로드">다운로드</button></td>
+                    </tr>
+                    <tr>
+                        <th>클래스명</th>
+                        <th>pdf_download_btn</th>
+                    </tr>
+                    <tr>
+                        <th>CSS<br />(common.css 추가)</th>
+                        <td>
+                            <pre>
+                                .pdf_download_btn{
+                                    text-align: center;
+                                    padding: 5px 10px;
+                                    border-radius: 3px;
+                                    font-size: 14px;
+                                    background-color: #C80A0A;
+                                    color: #fff;
+                                    vertical-align: middle;
+                                }
+                                .pdf_download_btn img{
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    width: 16.4px;
+                                    height: 16.4px;
+                                    margin-right: 5px;
+                                }
+                            </pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 푸터 시작 -->
+    <footer>
+        <img src="img/logo.svg" alt="로고">
+        <span>Copyright ⓒ Hanwha Energy All right reserved.</span>
+    </footer>
+    <!-- 푸터 끝 -->
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        // 메뉴 마우스오버 / 마우스아웃 이벤트
+        var menu_src;
+        var change_src;
+
+        $('.aside_list > li > a').on({
+            'mouseover':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_off", "_on");
+                $(this).children('.m_menu').attr('src', change_src);
+            },
+            'mouseout':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_on", "_off");
+                $(this).children('.m_menu').attr('src', change_src);
+            }
+        });
+
+        // 메뉴 on / off시 메뉴 / 컨텐츠 / 푸터 너비 변경 이벤트
+        $('.top_menu_btn').click(function(){
+            var aside_w = $('aside').width();
+
+            if (aside_w == 230) {
+                $('aside').css('width', '56px');
+                $('#container').css('padding-left', 56);
+                $('footer').css('width', $(window).width() - 56);
+                $('.aside_list span, .sub_menu_btn, .aside_sub_list').css('display', 'none');
+            } else if (aside_w == 56) {
+                $('aside').css('width', '230px');
+                $('#container').css('padding-left', 230);
+                $('footer').css('width', $(window).width() - 230);
+                $('.aside_list span, .sub_menu_btn, .aside_sub_list').css('display', 'inline-block');
+            }
+        });
+    });
+</script>
+</body>
+</html>

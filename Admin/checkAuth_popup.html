@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>조회권한관리팝업</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/popup.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+<body>
+<div id="modal">
+    <div class="popup_section clear">
+        <div class="popup_site_section_01">
+            <span>선택되지 않은 사이트</span>
+            <ul class="popup_site_list clear">
+                <li>
+                    <div class="popup_site_search">
+                        <div class="popup_site_check">
+                            <input type="checkbox" id="siteCount" checked>
+                            <label for="siteCount">3개</label>
+                        </div>
+                        
+                        <div class="search_group">
+                            <input type="text" id="searchSite" style="width: 100%;">
+                            <button type="button" class="search"></button>
+                        </div>
+
+                        <button class="btn move" alt="왼쪽으로 이동">To Left</button>
+                    </div>
+
+                    <ul class="popup_site_sub_list">
+                        <li>
+                            <input type="checkbox" id="site1-1" checked>
+                            <label for="site1-1">AUAU0010120200800001</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="site1-2" checked>
+                            <label for="site1-2">AUAU0010120200800002</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="site1-2" checked>
+                            <label for="site1-2">AUAU0010120200800002</label>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="popup_site_section_02">
+            <span>선택된 사이트</span>
+            <ul class="popup_site_list clear">
+                <li>
+                    <div class="popup_site_search">
+                        <div class="popup_site_check">
+                            <input type="checkbox" id="siteCount">
+                            <label for="siteCount">0개</label>
+                        </div>
+                        
+                        <div class="search_group">
+                            <input type="text" id="searchSite" style="width: 100%;">
+                            <button type="button" class="search"></button>
+                        </div>
+
+                        <button class="btn move">To Right</button>
+                    </div>
+
+                    <ul class="popup_site_sub_list">
+                        <li>
+                            <input type="checkbox" id="site2-1" disabled>
+                            <label for="site2-1">AUAU0010120200800001</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="site2-2" disabled>
+                            <label for="site2-2">AUAU0010120200800002</label>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="btn_section2 clear">
+        <button type="submit" class="btn ok" alt="확인">확인</button>
+    </div>
+</body>
+</html>

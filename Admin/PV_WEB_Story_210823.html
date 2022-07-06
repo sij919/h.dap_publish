@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>한화에너지</title>
+
+    <script type="text/javascript"
+	    src="https://tdap.hanwha.com/javascripts/api/tableau-2.min.js"></script>
+
+	<style>
+		#tableauArea{
+            text-align: center;
+            margin: 0 auto; /* Tableau 영역 콘텐츠 가운데 정렬 */
+        }
+		.tab-zone-margin{
+            display: inline-block;
+            width: 95%; /* 상단 메뉴 너비 수정 (와이드 스크린) */
+            height: 71px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            margin: 0 15px;
+            scroll-behavior: smooth;
+		}
+		.inline {
+            font-family: "Tableau Book", Arial, sans-serif;
+			display: inline-block;
+			background-color : rgb(237, 237, 237);
+            border: 1px solid rgb(237, 237, 237);
+			width: 106px;
+			height: 40px;
+			font-size: 9pt;
+			color: #767676;
+            vertical-align: middle;
+            white-space: normal;
+            text-align: left;
+            cursor: pointer;
+            padding-left: 25px;
+            padding-top: 11px;
+            padding-right: 12px;
+            text-indent: -14px;
+		}
+		.inline:hover {
+			border-color: rgb(0, 0, 0);
+		}
+		.selected {
+			background-color : rgb(219, 219, 219);
+			color: rgb(0, 0, 0);
+			border: 1px solid rgb(219, 219, 219);
+            font-weight: bold;
+		}
+        .tab-arrow {
+            display: inline-block;
+            width: 16px;
+            height: 51px;
+            cursor: pointer;
+            vertical-align: top;
+            padding-top: 10px;
+        }
+        .tab-left {
+            background: url(/img/vqlweb.svg) -40px -150px no-repeat; /* url 경로변경(서버) */
+            opacity: .3;
+            width: 16px;
+            height: 32px;
+        }
+        .tab-right {
+            background: url(/img/vqlweb.svg) -20px -150px no-repeat; /* url 경로변경(서버) */
+            opacity: .3;
+            width: 16px;
+            height: 32px;
+        }
+        .tab-left:hover, .tab-right:hover {
+            opacity: 1;
+        }
+	</style>
+	
+	<script type="text/javascript">
+		var viz = null;
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer"),
+                url = "https://tdap.hanwha.com/#/views/PV_WEB/1_PVSummary",
+                options = {
+                    hideTabs: true,
+                    onFirstInteractive: function () {
+                        console.log("Run this code when the viz has finished loading.");
+                    }
+                };
+
+            viz = new tableau.Viz(containerDiv, url, options);
+            // Create a viz object and embed it in the container div.
+        }
+		function moveDashboard(target){
+			var sheetName = target.textContent;
+			workbook = viz.getWorkbook();
+
+			workbook.activateSheetAsync(sheetName);
+			
+			var elements = document.getElementsByClassName('inline');
+			for (var i = 0; i < elements.length; i++) {
+				elements[i].classList.remove('selected');
+			}
+			target.classList.add('selected');
+		}
+		document.addEventListener("DOMContentLoaded", function(){
+		  initViz();
+		});
+		
+    </script>
+</head>
+
+<body onload="">
+	<div id="tableauArea" style="width:1400px;">
+		<span class="tab-arrow">
+			<div class="tab-left" onclick="moveScrollLeft()"></div>
+		</span>
+		<div class="tab-zone-margin">
+			<div class="inline selected" onclick="moveDashboard(this)">1. PV Summary</div>
+			<div class="inline" onclick="moveDashboard(this)">2. 발전량(발전시간)상세분석</div>
+			<div class="inline" onclick="moveDashboard(this)">3. 일사량상세분석(기후영향)</div>
+			<div class="inline" onclick="moveDashboard(this)">4. 일사량 상세 분석</div>
+			<div class="inline" onclick="moveDashboard(this)">5. 성능비 상세 분석</div>
+			<div class="inline" onclick="moveDashboard(this)">6. 인버터 개별 영향</div>
+			<div class="inline" onclick="moveDashboard(this)">7. 스트링 개별 영향</div>
+			<div class="inline" onclick="moveDashboard(this)">8. 인버터 개별 영향</div>
+			<div class="inline" onclick="moveDashboard(this)">9. 가동률상세분석(인버터개별영향)</div>
+			<div class="inline" onclick="moveDashboard(this)">10. 변압기개별영향(내부온도특성)</div>
+			<div class="inline" onclick="moveDashboard(this)">11. 기타요인 상세 분석(절연저항)</div>
+			<div class="inline" onclick="moveDashboard(this)">12. 기타요인 상세 분석(절연저항)</div>
+			<div class="inline" onclick="moveDashboard(this)">13. 기타요인 상세 분석(계통안정성)</div>
+			<div class="inline" onclick="moveDashboard(this)">14. 기타요인 상세 분석(운전방안 개선)</div>
+		</div>
+		<span class="tab-arrow">
+			<div class="tab-right" onclick="moveScrollRight()"></div>
+		</span>
+		<div id="vizContainer" style="width:1400px; height:900px;"></div>
+	</div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 좌우 이동 스크롤
+            $.fn.hasScrollBar = function() {
+                return (this.prop("scrollWidth") == 0 && this.prop("clientWidth") == 0)
+                        || (this.prop("scrollWidth") > this.prop("clientWidth"));
+            };
+            function wheel(name){
+                $('.tab-zone-margin').on('mousewheel',function(e){
+                    var hasScroll = $(this).hasScrollBar();
+                    if(!hasScroll){
+                    } else {
+                        e.preventDefault(); 
+                        var wheelDelta = e.originalEvent.wheelDelta;
+                        if(wheelDelta > 0){
+                            $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+                        }else{
+                            $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+                        }
+                    }
+                });
+            }
+            $(function(){
+                wheel('.tab-zone-margin');
+            });
+
+            // 화살표 이동 스크롤
+            moveScrollLeft = function() {
+                var _scrollX = $('.tab-zone-margin').scrollLeft();
+                $('.tab-zone-margin').scrollLeft(_scrollX - 100);
+            }
+
+            moveScrollRight = function() {
+                var _scrollX = $('.tab-zone-margin').scrollLeft();
+                $('.tab-zone-margin').scrollLeft(_scrollX + 100);
+            }
+
+            // 메뉴 클릭
+            $('.inline').click(function() {
+                $(this).addClass('selected');
+                $('.inline').not($(this)).removeClass('selected');
+            });
+        });
+    </script>
+</body>
+</html>

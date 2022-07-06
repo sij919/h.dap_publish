@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="11.739" viewBox="0 0 18 11.739">
+    <defs>
+        <style>
+            .cls-1{fill:#f47423}
+        </style>
+    </defs>
+    <g id="사용자관리_on" transform="translate(0 -85.333)">
+        <g id="그룹_141" transform="translate(6.261 85.333)">
+            <g id="그룹_140">
+                <circle id="타원_2" cx="2.739" cy="2.739" r="2.739" class="cls-1"/>
+            </g>
+        </g>
+        <g id="그룹_143" transform="translate(12.522 88.463)">
+            <g id="그룹_142">
+                <circle id="타원_3" cx="1.957" cy="1.957" r="1.957" class="cls-1"/>
+            </g>
+        </g>
+        <g id="그룹_145" transform="translate(1.621 88.463)">
+            <g id="그룹_144">
+                <circle id="타원_4" cx="1.957" cy="1.957" r="1.957" class="cls-1"/>
+            </g>
+        </g>
+        <g id="그룹_147" transform="translate(3.913 91.594)">
+            <g id="그룹_146">
+                <path id="패스_75" d="M111.753 256a5.093 5.093 0 0 0-5.087 5.087.391.391 0 0 0 .391.391h9.391a.391.391 0 0 0 .391-.391 5.093 5.093 0 0 0-5.086-5.087z" class="cls-1" transform="translate(-106.666 -256)"/>
+            </g>
+        </g>
+        <g id="그룹_149" transform="translate(0 93.159)">
+            <g id="그룹_148">
+                <path id="패스_76" d="M4.252 298.752a3.511 3.511 0 0 0-.73-.085A3.526 3.526 0 0 0 0 302.189a.391.391 0 0 0 .391.391H3.2a1.16 1.16 0 0 1-.072-.391 5.833 5.833 0 0 1 1.124-3.437z" class="cls-1" transform="translate(0 -298.667)"/>
+            </g>
+        </g>
+        <g id="그룹_151" transform="translate(13.748 93.159)">
+            <g id="그룹_150">
+                <path id="패스_77" d="M375.493 298.667a3.511 3.511 0 0 0-.73.085 5.833 5.833 0 0 1 1.121 3.437 1.161 1.161 0 0 1-.072.391h2.811a.391.391 0 0 0 .391-.391 3.526 3.526 0 0 0-3.521-3.522z" class="cls-1" transform="translate(-374.763 -298.667)"/>
+            </g>
+        </g>
+    </g>
+</svg>

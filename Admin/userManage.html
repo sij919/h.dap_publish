@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEIS.DAP</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/content.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/popup.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+
+<!-- 등록 / 수정 모달 -->
+<div id="modal2" style="display: none;">
+    <div>
+        <div class="modal_top">
+            <span>
+                사용자 정보 입력
+                <img src="img/close.svg" id="modalClose" alt="닫기">
+            </span>
+        </div>
+        <!-- 입력 폼 영역 시작 -->
+        <div class="form_section">
+            <div class="form_group">
+                <label for="userId"><span class="color">*</span> 사용자ID</label>
+                <input type="text" id="userId" disabled>
+                <span class="valid_check">유효성검사</span>
+            </div>
+    
+            <div class="form_group">
+                <label for="userPw"><span class="color">*</span> 패스워드</label>
+                <input type="password" id="userPw">
+                <span class="valid_check">유효성검사</span>
+            </div>
+    
+            <div class="form_group">
+                <label for="userPwOk">패스워드확인</label>
+                <input type="userPwOk" id="userPw">
+                <span class="valid_check">유효성검사</span>
+            </div>
+    
+            <div class="form_group">
+                <label for="userGrade"><span class="color">*</span> 사용자등급</label>
+                <select id="userGrade" name="userGrade">
+                    <option>Customer</option>
+                    <option>Admin</option>
+                    <option>Installer</option>
+                </select>
+            </div>
+            
+            <div class="form_group">
+                <label for="userName">사용자명</label>
+                <input type="text" id="userName">
+            </div>
+    
+            <div class="form_group">
+                <label for="userPhone"><span class="color">*</span> 전화번호</label>
+                <input type="text" id="userPhone">
+                <span class="valid_check">유효성검사</span>
+            </div>
+    
+            <div class="form_group">
+                <label for="userEmail"><span class="color">*</span> Email</label>
+                <input type="text" id="userEmail">
+                <span class="valid_check">유효성검사</span>
+            </div>
+    
+            <div class="form_group">
+                <label class="alarm">알림설정</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="alarmEmail" name="alarm">
+                        <label for="alarmEmail">Email</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="alarmSms" name="alarm" checked>
+                        <label for="alarmSms">SNS</label>
+                    </li>
+                    <select id="userSns" name="userSns" style="width: 100px;">
+                        <option>카카오</option>
+                        <option>WhatsUp</option>
+                    </select>
+                </ul>
+            </div>
+    
+            <div class="form_group">
+                <label class="alarm"><span class="color">*</span> 메일발송여부</label>
+                <ul>
+                    <li><input type="radio" id="sendMailY" name="sendMailYN" checked>
+                        <label for="sendMailY">사용</label>
+                    </li>
+                    <li><input type="radio" id="sendMailN" name="sendMailYN">
+                        <label for="sendMailN">미사용</label>
+                    </li>  
+                </ul>
+            </div>
+    
+            <div class="form_group">
+                <label class="alarm"><span class="color">*</span> SNS발송여부</label>
+                <ul>
+                    <li><input type="radio" id="sendSnsY" name="sendSnsYN" checked>
+                        <label for="sendSnsY">사용</label>
+                    </li>
+                    <li><input type="radio" id="sendSnsN" name="sendSnsYN">
+                        <label for="sendSnsN">미사용</label>
+                    </li>  
+                </ul>
+            </div>
+    
+            <div class="form_group">
+                <label class="alarm"><span class="color">*</span> 사용여부</label>
+                <ul>
+                    <li><input type="radio" id="useY" name="useYN" checked>
+                        <label for="useY">사용</label>
+                    </li>
+                    <li><input type="radio" id="useN" name="useYN">
+                        <label for="useN">미사용</label>
+                    </li>  
+                </ul>
+            </div>
+    
+            <div class="form_group">
+                <label for="menuAuth"><span class="color">*</span> 메뉴권한</label>
+                <select id="menuAuth" name="menuAuth" style="width: calc(100% - 219px);">
+                    <option>Customer</option>
+                    <option>Admin</option>
+                    <option>Installer</option>
+                </select>
+                <div class="auth_btn">
+                    <a href="#"><img src="img/add.svg"><span>메뉴권한</span></a>
+                </div>
+            </div>
+    
+            <div class="form_group">
+                <label for="viewAuth"><span class="color">*</span> 조회권한</label>
+                <select id="viewAuth" name="viewAuth" style="width: calc(100% - 219px);">
+                    <option>Customer</option>
+                    <option>Admin</option>
+                    <option>Installer</option>
+                </select>
+                <div class="auth_btn">
+                    <a href="#"><img src="img/add.svg"><span>조회권한</span></a>
+                </div>
+            </div>
+    
+            <div class="form_group">
+                <label for="tableauAccount">태블로계정</label>
+                <input type="password" id="tableauAccount">
+                <span class="valid_check">유효성검사</span>
+            </div>
+    
+            <div class="form_group">
+                <label class="alarm">개인정보활용동의</label>
+                <ul>
+                    <li><input type="radio" id="pInfoY" name="pInfo" checked>
+                        <label for="pInfoY">Y</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="pInfoN" name="pInfo">
+                        <label for="pInfoN">N</label>
+                    </li>
+                    <span>(2021-03-25 15:30:20)</span>
+                </ul>
+            </div>
+    
+            <div class="form_group">
+                <label class="alarm">데이터활용동의</label>
+                <ul>
+                    <li><input type="radio" id="dataUseY" name="dataUse" checked>
+                        <label for="dataUseY">Y</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="dataUseN" name="dataUse">
+                        <label for="dataUseN">N</label>
+                    </li>
+                    <span>(2021-03-25 15:30:20)</span>
+                </ul>
+                
+            </div>
+        </div>
+        <!-- 입력 폼 영역 끝 -->
+
+        <!-- 취소 / 저장 버튼 시작 -->
+        <div class="btn_section2"> 
+            <button type="reset" class="btn cancel" alt="취소">취소</button> 
+            <button type="submit" class="btn add" alt="저장">저장</button> 
+        </div>
+        <!-- 취소 / 저장 버튼 끝 -->
+    </div>
+</div>
+<!-- 등록 / 수정 모달 -->
+
+<!-- 로그아웃 모달 -->
+<div id="modal3" style="display: none;">
+    <div>
+        <div class="alert_wr">
+            <div>
+                <img src="img/alert.svg">
+                <span>
+                    정보보호를 위하여 연결이 종료되었습니다.<br />
+                    재로그인 후 사용하여 주십시오.
+                </span>
+            </div>
+            
+            <button class="btn ok" id="loginClose" alt="확인">확인</button>
+        </div>
+    </div>
+</div>
+<!-- 로그아웃 모달 -->
+
+<body>
+<!-- 헤더 시작 -->
+<header>
+    <div class="top_menu_btn">
+        <img src="img/side_menu_btn.svg" alt="메뉴버튼">
+    </div>
+    <div class="top_logo">
+        <img src="img/logo.svg" alt="로고">
+    </div>
+    <div class="top_contents">
+        <select class="language_select" style="width: 60px;">
+            <option>KR</option>
+            <option>EN</option>
+            <option>JP</option>
+        </select>
+        <span>　</span>
+        <button class="logout_btn">로그아웃</button>
+    </div>
+</header>
+<!-- 헤더 끝 -->
+
+<!-- 메뉴 시작 -->
+<aside>
+    <div class="aside_list_wr">
+        <ul class="aside_list">
+            <li><a href="#"><img src="img/menu/m_user_off.svg" alt="사용자 관리" class="m_menu"><span>사용자 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="userManage.html"><span>사용자 정보 관리</span></a></li>
+                    <li><a href="commentManage.html"><span>평가 코멘트 관리</span></a></li>
+                    <li><a href="customerComment.html"><span>고객의 소리 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_site_off.svg" alt="사이트 관리" class="m_menu"><span>사이트 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="siteManage.html"><span>사이트 정보 관리</span></a></li>
+                    <li><a href="siteManageFacSpecLayer.html"><span>설비 모델 스펙 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_menu_off.svg" alt="데이터룰 관리" class="m_menu"><span>데이터룰 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="tagManage.html"><span>태그 관리</span></a></li>
+                    <li><a href="preProcessRuleManage.html"><span>전처리룰 관리</span></a></li>
+                    <li><a href="thresholdManage.html"><span>이상치 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_search_off.svg" alt="권한 관리" class="m_menu"><span>권한 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="menuAuth.html"><span>메뉴 권한 관리</span></a></li>
+                    <li><a href="checkAuth.html"><span>조회 권한 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><img src="img/menu/m_email_off.svg" alt="이력 관리" class="m_menu"><span>이력 관리</span><img src="img/menu/m_down_arrow.svg" alt="하위메뉴" class="sub_menu_btn"></a>
+                <ul class="aside_sub_list">
+                    <li><a href="sendManage.html"><span>메일/SNS 전송 관리</span></a></li>
+                </ul>
+            </li>
+            <li><a href="commonCode.html"><img src="img/menu/m_contents_off.svg" alt="컨텐츠관리" class="m_menu"><span>공통 코드 관리</span></a></li>
+        </ul>
+    </div>
+</aside>
+<!-- 메뉴 끝 -->
+
+<section id="container">
+    <div class="admin_contents_wr">
+
+        <!-- 컨텐츠 제목 -->
+        <div class="admin_contents_title">사용자관리</div>
+        <!-- 컨텐츠 제목 -->
+
+        <div class="admin_contents">
+            <div class="view_count">조회건수 <span>85</span></div>
+
+            <!-- 엑셀 다운로드 / 검색 시작 -->
+            <div class="search_wr">
+                <div class="download_btn">
+                    <img src="img/excel.svg" alt="엑셀 다운로드">
+                </div>
+                <div class="search_box">
+                    <select class="search_select" style="width: 80px;">
+                        <option>전체</option>
+                        <option>하나</option>
+                        <option>둘</option>
+                        <option>셋</option>
+                    </select>
+                    <input type="text" placeholder="검색어를 입력하세요" style="width: 155px;">
+                    <button type="submit"></button>
+                </div>
+                <button class="btn refresh" id="btnCancel" alt="새로고침"></button>
+            </div>
+            <!-- 엑셀 다운로드 / 검색 끝 -->
+
+            <div class="admin_contents_table_wr"> 
+
+                <!-- 컨텐츠 (테이블) 시작-->
+                <table class="table">
+                    <colgroup>
+                        <col style="width: 15%">
+                        <col style="width: 10%">
+                        <col style="width: 10%">
+                        <col style="width: 15%">
+                        <col style="width: 20%">
+                        <col style="width: 10%">
+                        <col style="width: 10%">
+                        <col style="width: 10%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>사용자 ID</th>
+                            <th>사용자 등급</th>                 
+                            <th>사용자명</th>
+                            <th>전화번호</th>
+                            <th>이메일</th>
+                            <th>사용여부</th>
+                            <th>메뉴권한</th>
+                            <th>조회권한</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                        <tr> 
+                            <td class="txt_c">AU2020060001</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Dukhoi</td>
+                            <td class="txt_c">821023142423</td>
+                            <td class="txt_c">dukhoi@gmail.com</td>
+                            <td class="txt_c">Y</td>
+                            <td class="txt_c">Admin</td>
+                            <td class="txt_c">Admin</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 컨텐츠 (테이블) 끝 -->
+            </div>
+
+            <!-- 페이징 시작 -->
+            <div class="admin_pagination_wr">
+                <ul class="admin_pagination">
+                    <li>
+                        <a href="#" class="page_link">
+                            <img src="img/backward.svg" alt="첫페이지로 이동">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="page_link">
+                            <img src="img/prev.svg" alt="이전페이지로 이동">
+                        </a>
+                    </li>
+                    <li><a href="#" class="page_focus">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" class="page_link">
+                            <img src="img/next.svg" alt="다음페이지로 이동">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="page_link">
+                            <img src="img/forward.svg" alt="마지막페이지로 이동">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 페이징 끝 -->
+
+            <!-- 등록버튼 시작 --> 
+            <div class="btn_section" style="text-align: right;">
+                <button class="btn add" id="modalOpen" alt="신규등록">신규등록</button>
+            </div>
+            <!-- 등록버튼 끝 -->
+        </div>
+    </div>
+
+    <!-- 푸터 시작 -->
+    <footer>
+        <img src="img/logo.svg" alt="로고">
+        <span>Copyright ⓒ Hanwha Energy All right reserved.</span>
+    </footer>
+    <!-- 푸터 끝 -->
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+    $(document).ready(function() {
+
+        // 메뉴 마우스오버 / 마우스아웃 이벤트
+        var menu_src;
+        var change_src;
+
+        $('.aside_list > li > a').on({
+            'mouseover':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_off", "_on");
+                $(this).children('.m_menu').attr('src', change_src);
+            },
+            'mouseout':function() {
+                menu_src = $(this).children('.m_menu').attr('src');
+                change_src = menu_src.replace("_on", "_off");
+                $(this).children('.m_menu').attr('src', change_src);
+            }
+        });
+
+        // 메뉴 열기
+        $('.top_menu_btn').click(function(){
+            if ($('aside').is(':visible')) {
+                $('aside').hide("slide", {direction : "left"}, 500);
+                $('.top_menu_btn > img').attr('src', 'img/side_menu_btn.svg');
+                $('.aside_list span, .sub_menu_btn, .aside_sub_list').css('display', 'none');
+            } else {
+                $('aside').show("slide", {direction : "left"}, 500);
+                $('html').css('background-color', 'rgba(0,0,0,0.5)');
+                $('.top_menu_btn > img').attr('src', 'img/close.svg');
+                $('.aside_list span, .sub_menu_btn').css('display', 'inline-block');
+                $('.aside_sub_list').css('display', 'block');
+            }
+        });
+
+        // 등록 / 수정 모달
+        $('#modalOpen, tbody > tr').click(function(){
+            $('#modal2').show();
+            $("#modal2 > div").css('margin-top', -($("#modal2 > div").height() / 2));
+            $("#modal2 > div").css('margin-left', -($("#modal2 > div").width() / 2));
+        });
+
+        $('#modalClose').click(function(){
+            $('#modal2').hide();
+        });
+
+        // 로그아웃 모달
+        $('.logout_btn').click(function(){
+            $('#modal3').show();
+            $("#modal3 > div").css('margin-top', -($("#modal3 > div").height() / 2));
+            $("#modal3 > div").css('margin-left', -($("#modal3 > div").width() / 2));
+        });
+
+        $('#loginClose').click(function(){
+            $('#modal3').hide();
+        });
+    });
+</script>
+</body>
+</html>

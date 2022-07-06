@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEIS.DAP</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/popup.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+<body>
+<div id="modal">
+    <!-- 입력 폼 영역 시작 -->
+    <div class="form_section">
+        <div class="form_group">
+            <label class="dateSelect">구분</label>
+            <ul>
+                <li><input type="radio" id="month" name="dateSelect" checked>
+                    <label for="month">월간</label>
+                </li>
+                <li><input type="radio" id="year" name="dateSelect">
+                    <label for="year">연간</label>
+                </li>  
+            </ul>
+        </div>
+        <div class="form_group">
+            <label class="sendDate">전송일</label>
+            <span>매달 <input type="text" id="sendDay" style="width: 50px"> 일 <input type="text" id="sendHour" style="width: 50px"> 시</span>
+        </div>
+        <div class="form_group">
+            <label class="sendMailYn">메일 발송여부</label>
+            <ul>
+                <li><input type="radio" id="sendMailY" name="sendMailYn" checked>
+                    <label for="sendMailY">발송</label>
+                </li>
+                <li><input type="radio" id="sendMailN" name="sendMailYn">
+                    <label for="sendMailN">발송안함</label>
+                </li>  
+            </ul>
+        </div>
+        <div class="form_group">
+            <label class="sendSNSYn">SNS 발송여부</label>
+            <ul>
+                <li><input type="radio" id="sendSNSY" name="sendSNSYn" checked>
+                    <label for="sendSNSY">발송</label>
+                </li>
+                <li><input type="radio" id="sendSNSN" name="sendSNSYn">
+                    <label for="sendSNSN">발송안함</label>
+                </li>  
+            </ul>
+        </div>
+    </div>
+
+    <!-- 취소 / 저장 버튼 시작 -->
+    <div class="btn_section2"> <!-- (변경) -->
+        <button type="reset" class="btn cancel" alt="취소">취소</button> <!-- (변경) -->
+        <button type="submit" class="btn add" alt="저장">저장</button> <!-- (변경) -->
+    </div>
+    <!-- 취소 / 저장 버튼 끝 -->
+</div>
+</body>
+</html>

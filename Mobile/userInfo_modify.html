@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEIS.DAP</title>
+    <link href="css/mobile.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+<body>
+    <header>
+        <div class="mobile_back_btn">
+            <button type="button"></button>
+        </div>
+        
+        <span class="mobile_title txt_c">사용자 정보</span>
+
+        <div class="mobile_btn_wr">
+            <img src="img/csfeedback.svg" alt="고객의 소리">
+            <img src="img/user.svg" alt="사용자 정보">
+        </div>
+    </header>
+
+    <div class="mobile_contents_wr">
+        <div class="mobile_contents_title">
+            <img src="img/icon_info.png" alt="사용자 정보 수정">
+            <span>사용자 정보 수정</span>
+        </div>
+        
+        <div class="mobile_contents">
+            <div>
+                <table class="m_table">
+                    <colgroup>
+                        <col style="width: 25%">
+                        <col style="width: 25%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>사용자명</td>
+                            <td colspan="2">hanwha</td>
+                        </tr>
+                        <tr>
+                            <td>전화번호</td>
+                            <td colspan="2">
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td colspan="2">
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>알림여부</td>
+                            <td><input type="radio" id="useY" name="alarm" checked>
+                                <label for="useY">사용</label>
+                            </td>
+                            <td>
+                                <input type="radio" id="useN" name="alarm">
+                                <label for="useN">미사용</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>비밀번호</td>
+                            <td colspan="2">
+                                <input type="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>비밀번호확인</td>
+                            <td colspan="2">
+                                <input type="password">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="btn_section" style="text-align: right;">
+                <button class="btn cancel" style="float: left; width: 48%;" alt="취소">취소</button>
+                <button class="btn save" style="width: 48%;" alt="저장">저장</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="compare.html"><img src="img/menu_1_off.svg" alt="비교분석" class="menu"><span>비교분석</span></a></li>
+            <li><a href="#"><img src="img/menu_2_off.svg" alt="전년대비분석" class="menu"><span>전년대비분석</span></a></li>
+            <li><a href="#"><img src="img/menu_3_off.svg" alt="사업계획분석" class="menu"><span>사업계획분석</span></a></li>
+            <li><a href="#"><img src="img/menu_4_off.svg" alt="설비품질분석" class="menu"><span>설비품질분석</span></a></li>
+            <li><a href="#"><img src="img/menu_5_off.svg" alt="일별트렌드" class="menu"><span>일별트렌드</span></a></li>
+        </ul>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>팝업</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/common.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/content.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/popup.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="css/jquery-ui.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+<body>
+
+<div id="modal">
+    <div class="form_section">
+        <div class="form_group">
+            <label for="cdCode">코드</label>
+            <input type="text" name="cdCode" id="cdCode" value="" required="">
+        </div>
+        <div class="form_group">
+            <label for="cdKorNm">코드명</label>
+            <input type="text" name="cdKorNm" id="cdKorNm" value="">
+        </div>
+
+        <div class="form_group">
+            <label for="cdDesc">코드 설명</label>
+            <input type="text" name="cdDesc" id="cdDesc" value="">
+        </div>
+    </div>
+
+    <div class="btn_section2">
+        <button type="reset" class="btn cancel" alt="취소">취소</button>
+        <button type="submit" class="btn add" alt="저장">저장</button>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        if($("#modal").is(":visible")) {
+            $("body").addClass("modalOverlay");
+        }
+    });
+</script>
+
+</body>
+</html>
